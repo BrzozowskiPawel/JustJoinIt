@@ -11,9 +11,19 @@ struct ContentView: View {
     @State private var offers = [Offer]()
     
     var body: some View {
-        VStack {
-            Text("Curently \($offers.count) offers.")
-            Button {
+        if $offers.count > 0 {
+            VStack {
+                Text("Curently \($offers.count) offers.")
+            }
+        } else {
+            ZStack {
+                Color.white.ignoresSafeArea()
+                Text("justjoin.it")
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                    .font(.system(size: 50))
+            }
+            .onAppear {
                 Task {
                     do {
                         offers = try await NetworkManager.shared.getOffers(atUrl: RepoURL.offers)
@@ -22,13 +32,7 @@ struct ContentView: View {
                         print("❌ Error - \(error.localizedDescription)")
                     }
                 }
-            } label: {
-                Text("FETCH!")
-                    .frame(width: 100, height: 50)
-                    .foregroundColor(.white)
-                    .background(.green.gradient)
             }
-            
         }
     }
 }
