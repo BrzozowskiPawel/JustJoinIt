@@ -44,7 +44,7 @@ struct TopBarView: View {
         }
         .padding(.horizontal, 8.0)
         .frame(height: 48)
-        .border(width: 0.5, edges: [.bottom,.top], color: .gray.opacity(0.5))
+        .border(width: 0.5, edges: [.bottom], color: .gray.opacity(0.5))
     }
 }
 
