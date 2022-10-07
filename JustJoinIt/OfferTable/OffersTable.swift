@@ -11,10 +11,15 @@ struct OffersTable: View {
     let offersArray: [Offer]
     
     var body: some View {
-        List(offersArray) { offer in
-            Text(offer.title)
+        List {
+            ForEach(offersArray) {
+                OfferCellView(offer: $0)
+                    .listRowInsets(EdgeInsets())
+                    .listRowSeparator(.hidden)
+            }
         }
         .listStyle(.plain)
+        .background(.gray.opacity(0.15))
     }
 }
 

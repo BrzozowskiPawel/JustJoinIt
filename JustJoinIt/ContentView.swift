@@ -16,8 +16,6 @@ struct ContentView: View {
                 VStack {
                     TopBarView()
                     FiltersView()
-                    
-                    Text("Curently \($offers.count) offers.")
                     OffersTable(offersArray: offers)
                 }
             }
