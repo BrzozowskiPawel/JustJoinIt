@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Offer: Codable {
+struct Offer: Codable, Identifiable {
     let title: String
     let street: String?
     let city: String

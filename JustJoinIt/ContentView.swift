@@ -16,9 +16,9 @@ struct ContentView: View {
                 VStack {
                     TopBarView()
                     FiltersView()
-                    Spacer()
+                    
                     Text("Curently \($offers.count) offers.")
-                    Spacer()
+                    OffersTable(offersArray: offers)
                 }
             }
         } else {
