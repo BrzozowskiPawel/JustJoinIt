@@ -58,6 +58,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E53FA6A028F04DA500AD1DBB /* OffersTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OffersTypes;
+			sourceTree = "<group>";
+		};
 		E5A0795528EF816700786847 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +93,7 @@
 		E5DA282528ED676F00A17AEF /* JustJoinIt */ = {
 			isa = PBXGroup;
 			children = (
+				E53FA6A028F04DA500AD1DBB /* OffersTypes */,
 				E5A0795528EF816700786847 /* Filters */,
 				E506181728EF3CE80020C89F /* TopBar */,
 				E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */,
