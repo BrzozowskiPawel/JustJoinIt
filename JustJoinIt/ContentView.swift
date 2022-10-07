@@ -13,7 +13,11 @@ struct ContentView: View {
     var body: some View {
         if $offers.count > 0 {
             VStack {
-                Text("Curently \($offers.count) offers.")
+                VStack {
+                    TopBarView()
+                    FiltersView()
+                    OffersTable(offersArray: offers)
+                }
             }
         } else {
             ZStack {
