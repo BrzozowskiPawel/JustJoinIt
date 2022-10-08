@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct OfferCellView: View {
-    let offer: Offer
+    let viewModel: OfferCellViewModel
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: offer.company_logo_url)) { image in
+            AsyncImage(url: URL(string: viewModel.getCompanyLogoUrl())) { image in
                 image
                     .resizable()
                     .scaledToFit()
@@ -26,11 +26,11 @@ struct OfferCellView: View {
             .padding(.leading, 4)
             
             VStack (alignment: .leading){
-                Text(offer.title)
+                Text(viewModel.getSalary())
                     .font(.system(size: 15))
                     .lineLimit(1)
                 Spacer()
-                Text(getSalaryText())
+                Text(viewModel.getSalary())
                     .foregroundColor(.green)
                     .font(.system(size: 12))
             }
@@ -46,7 +46,7 @@ struct OfferCellView: View {
                     .cornerRadius(16)
                 Spacer()
                 HStack {
-                    Text(offer.multilocation[0].city)
+                    Text(viewModel.getLocation())
                         .foregroundColor(.gray)
                         .font(.system(size: 10))
                     Image(systemName: "mappin.circle.fill")
@@ -65,63 +65,10 @@ struct OfferCellView: View {
         .listRowBackground(Color.clear)
         
     }
-    
-    func getSalaryText() -> String{
-        guard let rangeMin = offer.employment_types[0].salary?.from,
-                let rangeMax = offer.employment_types[0].salary?.to,
-                let currency = offer.employment_types[0].salary?.currency else {
-            return "Undisclosed Salary"
-        }
-        
-        let rangeMinRounded = (Double(rangeMin) / 1000.0).roundedTo(toPlaces: 1)
-        let rangeMaxRounded = (Double(rangeMax) / 1000.0).roundedTo(toPlaces: 1)
-        
-        return "\(rangeMinRounded)k - \(rangeMaxRounded)k \(currency)"
-    }
 }
 
 struct OfferCellView_Previews: PreviewProvider {
     static var previews: some View {
-        OfferCellView(offer: Offer(title: "Test",
-                                   street: "Ulica",
-                                   city: "Poznan",
-                                   country_code: "PL",
-                                   address_text: "Adress",
-                                   marker_icon: "Test",
-                                   workplace_type: "Workplace",
-                                   company_name: "Company name",
-                                   company_url: "url to company",
-                                   company_size: "company size",
-                                   experience_level: "mid",
-                                   latitude: "1123",
-                                   longitude: "1234",
-                                   published_at: "today",
-                                   remote_interview: true,
-                                   open_to_hire_ukrainians: true,
-                                   id: "id",
-                                   display_offer: true,
-                                   employment_types: [EmploymentType(
-                                     type: "Empl type", salary: Salary(
-                                         from: 1000,
-                                         to: 10000,
-                                         currency: "PLN"))],
-                                   company_logo_url: "logo url",
-                                   skills: [Skill(
-                                     name: "swift",
-                                     lavel: 3)],
-                                   remote: true,
-                                   multilocation: [Location(
-                                     city: "Poznan",
-                                     slug: "slug",
-                                     street: "Street")],
-                                   way_of_apply: "way of apply"))
-    }
-}
-
-extension Double {
-    /// Rounds the double to decimal places value
-    func roundedTo(toPlaces places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return (self * divisor).rounded() / divisor
+        OfferCellView(viewModel: OfferCellViewModel.mock())
     }
 }
