@@ -19,7 +19,7 @@ struct OffersTable: View {
             }
         }
         .listStyle(.plain)
-        .background(.gray.opacity(0.15))
+        .background(.gray.opacity(0.1))
     }
 }
 
