@@ -48,7 +48,7 @@ class OfferCellViewModel {
         let rangeMinRounded = (Double(rangeMin) / 1000.0).roundedTo(toPlaces: 1)
         let rangeMaxRounded = (Double(rangeMax) / 1000.0).roundedTo(toPlaces: 1)
         
-        return "\(rangeMinRounded)k - \(rangeMaxRounded)k \(currency)"
+        return "\(rangeMinRounded)k - \(rangeMaxRounded)k \(currency.uppercased())"
     }
 }
 
