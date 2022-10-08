@@ -18,8 +18,16 @@ class OfferCellViewModel {
         return offer.company_logo_url
     }
     
+    func getStreet() -> String {
+        return offer.street ?? ""
+    }
+    
     func getTitle() -> String {
         return offer.title
+    }
+    
+    func getWorkplace() -> String {
+        return offer.workplace_type
     }
     
     func getLocation() -> String {
@@ -28,6 +36,21 @@ class OfferCellViewModel {
         } else {
             return offer.multilocation[0].city
         }
+    }
+    
+    // TODO: Fix getEmplomentType and getSalary to be more generic
+    func getEmploymentTypes() -> [String] {
+        var employmentTypes = [String]()
+        offer.employment_types.forEach { employment in
+            // TODO: Fix - could be Undisclosed Salary but have a 2 or 3 work types (B2B/Permament...)
+            guard let rangeMin = employment.salary?.from,
+                    let rangeMax = employment.salary?.to,
+                    let currency = employment.salary?.currency else {
+                return employmentTypes.append("Undisclosed Salary - \(employment.type)")
+            }
+            employmentTypes.append("\(rangeMin) - \(rangeMax)k \(currency.uppercased()) - \(employment.type)")
+        }
+        return employmentTypes
     }
     
     func isNewOffer() -> Bool {
