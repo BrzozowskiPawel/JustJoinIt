@@ -30,6 +30,14 @@ class OfferCellViewModel {
         }
     }
     
+    func isNewOffer() -> Bool {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
+        let publishedAt = formatter.date(from: offer.published_at) ?? .now
+        let hoursSinceLastActivity = Calendar.current.dateComponents([.hour], from: publishedAt, to: .now).hour ?? 0
+        return hoursSinceLastActivity < 24 ? true : false
+    }
+    
     func getSalary() -> String{
         guard let rangeMin = offer.employment_types[0].salary?.from,
                 let rangeMax = offer.employment_types[0].salary?.to,

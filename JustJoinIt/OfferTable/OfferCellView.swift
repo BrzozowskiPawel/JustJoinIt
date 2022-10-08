@@ -37,13 +37,15 @@ struct OfferCellView: View {
             .padding(.vertical, 8)
             Spacer()
             VStack(alignment: .trailing) {
-                Text("NEW")
-                    .font(.system(size: 10))
-                    .padding(.vertical, 3.0)
-                    .padding(.horizontal, 6.0)
-                    .background(.gray.opacity(0.4))
-                    .foregroundColor(.gray)
-                    .cornerRadius(16)
+                if(viewModel.isNewOffer()) {
+                    Text("NEW")
+                        .font(.system(size: 10))
+                        .padding(.vertical, 3.0)
+                        .padding(.horizontal, 6.0)
+                        .background(.gray.opacity(0.4))
+                        .foregroundColor(.gray)
+                        .cornerRadius(16)
+                }
                 Spacer()
                 HStack {
                     Text(viewModel.getLocation())
