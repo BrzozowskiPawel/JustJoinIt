@@ -38,11 +38,11 @@ private struct OfferSecondaryInfo: View {
         VStack(alignment: .trailing) {
             if(newOffer) {
                 Text("NEW")
-                    .font(.system(size: 10))
-                    .padding(.vertical, 3.0)
-                    .padding(.horizontal, 6.0)
-                    .background(.gray.opacity(0.4))
+                    .font(.system(size: 8))
+                    .padding(.vertical, 2)
+                    .padding(.horizontal, 4.0)
                     .foregroundColor(.gray)
+                    .background(.gray.opacity(0.3))
                     .cornerRadius(16)
             }
             Spacer()
