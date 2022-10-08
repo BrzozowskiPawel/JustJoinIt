@@ -15,7 +15,7 @@ struct OfferCellView: View {
         HStack {
             CompanyLogo(logoURL: viewModel.getCompanyLogoUrl())
             
-            OfferMainInfo(title: viewModel.getTitle(), salary: viewModel.getSalary())
+            OfferMainInfo(vm: viewModel)
                 .padding(.vertical, 8)
             Spacer()
             OfferSecondaryInfo(newOffer: viewModel.isNewOffer(), location: viewModel.getLocation())
@@ -59,16 +59,23 @@ private struct OfferSecondaryInfo: View {
 }
 
 private struct OfferMainInfo: View {
-    let title: String
-    let salary: String
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
+    
+    let vm: OfferCellViewModel
     var body: some View {
         VStack (alignment: .leading){
-            Text(title)
-                .fontWeight(.medium)
-                .font(.system(size: 14))
-                .lineLimit(1)
+            
+            Button(vm.getTitle()) {
+                self.viewControllerHolder?.present(style: .fullScreen) {
+                    OfferDetailView(viewModel: vm)
+                }
+            }
+            .fontWeight(.medium)
+            .font(.system(size: 14))
+            .lineLimit(1)
+            
             Spacer()
-            Text(salary)
+            Text(vm.getSalary())
                 .foregroundColor(.green)
                 .font(.system(size: 12))
         }
