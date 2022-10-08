@@ -24,9 +24,9 @@ class OfferCellViewModel {
     
     func getLocation() -> String {
         if offer.multilocation.count > 1  {
-            return offer.multilocation[0].city
-        } else {
             return "\(offer.multilocation[0].city) +\(offer.multilocation.count)"
+        } else {
+            return offer.multilocation[0].city
         }
     }
     

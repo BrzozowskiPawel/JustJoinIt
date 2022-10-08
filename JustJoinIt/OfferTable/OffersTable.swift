@@ -13,7 +13,7 @@ struct OffersTable: View {
     var body: some View {
         List {
             ForEach(offersArray) {
-                OfferCellView(offer: $0)
+                OfferCellView(viewModel: OfferCellViewModel(offer: $0))
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
             }

@@ -69,6 +69,6 @@ struct OfferCellView: View {
 
 struct OfferCellView_Previews: PreviewProvider {
     static var previews: some View {
-        OfferCellView(viewModel: OfferCellViewModel.mock())
+        OfferCellView(viewModel: OfferCellViewModel.mockVM())
     }
 }
