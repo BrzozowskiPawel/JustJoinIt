@@ -26,7 +26,7 @@ struct OfferCellView: View {
         .cornerRadius(6)
         .frame(height: 60)
         .padding(.horizontal, 6)
-        .padding(.vertical, 2)
+        .padding(.top, 5)
         .listRowBackground(Color.clear)
     }
 }
