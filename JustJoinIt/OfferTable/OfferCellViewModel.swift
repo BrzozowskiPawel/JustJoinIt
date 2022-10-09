@@ -6,12 +6,28 @@
 //
 
 import Foundation
-
+import MapKit
 class OfferCellViewModel {
     private let offer: Offer
     
     init(offer: Offer) {
         self.offer = offer
+    }
+    
+    func getMapData() -> MapViewData {
+        return MapViewData(
+            region: MKCoordinateRegion(
+                center: CLLocationCoordinate2D(
+                    latitude: Double(offer.latitude) ?? 0,
+                    longitude: Double(offer.longitude) ?? 0),
+                latitudinalMeters: 500, longitudinalMeters: 500),
+            places: [
+                Place(
+                    name: offer.title,
+                    coordinate: CLLocationCoordinate2D(
+                        latitude:  Double(offer.latitude) ?? 0,
+                        longitude: Double(offer.longitude) ?? 0))
+            ])
     }
     
     func getCompanyName() -> String {

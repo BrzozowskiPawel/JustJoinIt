@@ -53,11 +53,7 @@ struct OfferDetailView: View {
             
             InfoTails(vm: viewModel)
             
-            Text("Salary chart")
-            
-            Text("Company info")
-            
-            Text("Map")
+            MapView(data: viewModel.getMapData())
             
             Spacer()
         }
