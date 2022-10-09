@@ -15,7 +15,7 @@ struct OfferCellView: View {
         HStack {
             CompanyLogo(logoURL: viewModel.getCompanyLogoUrl())
             
-            OfferMainInfo(title: viewModel.getTitle(), salary: viewModel.getSalary())
+            OfferMainInfo(vm: viewModel)
                 .padding(.vertical, 8)
             Spacer()
             OfferSecondaryInfo(newOffer: viewModel.isNewOffer(), location: viewModel.getLocation())
@@ -26,7 +26,7 @@ struct OfferCellView: View {
         .cornerRadius(6)
         .frame(height: 60)
         .padding(.horizontal, 6)
-        .padding(.vertical, 2)
+        .padding(.top, 5)
         .listRowBackground(Color.clear)
     }
 }
@@ -38,11 +38,11 @@ private struct OfferSecondaryInfo: View {
         VStack(alignment: .trailing) {
             if(newOffer) {
                 Text("NEW")
-                    .font(.system(size: 10))
-                    .padding(.vertical, 3.0)
-                    .padding(.horizontal, 6.0)
-                    .background(.gray.opacity(0.4))
+                    .font(.system(size: 8))
+                    .padding(.vertical, 2)
+                    .padding(.horizontal, 4.0)
                     .foregroundColor(.gray)
+                    .background(.gray.opacity(0.3))
                     .cornerRadius(16)
             }
             Spacer()
@@ -59,16 +59,23 @@ private struct OfferSecondaryInfo: View {
 }
 
 private struct OfferMainInfo: View {
-    let title: String
-    let salary: String
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
+    
+    let vm: OfferCellViewModel
     var body: some View {
         VStack (alignment: .leading){
-            Text(title)
-                .fontWeight(.medium)
-                .font(.system(size: 14))
-                .lineLimit(1)
+            
+            Button(vm.getTitle()) {
+                self.viewControllerHolder?.present(style: .fullScreen) {
+                    OfferDetailView(viewModel: vm)
+                }
+            }
+            .fontWeight(.medium)
+            .font(.system(size: 14))
+            .lineLimit(1)
+            
             Spacer()
-            Text(salary)
+            Text(vm.getSalary())
                 .foregroundColor(.green)
                 .font(.system(size: 12))
         }
