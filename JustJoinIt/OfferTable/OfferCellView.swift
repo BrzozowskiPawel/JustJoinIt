@@ -66,8 +66,19 @@ private struct OfferMainInfo: View {
         VStack (alignment: .leading){
             
             Button(vm.getTitle()) {
-                self.viewControllerHolder?.present(style: .fullScreen) {
-                    OfferDetailView(viewModel: vm)
+                Task {
+                    do {
+                        let url = URLs.detailOffer(for: vm.getID())
+                        let detailOffer = try await NetworkManager.shared.getDetailOffer(atUrl: url)
+                        
+                        let detailVM = DetailViewModel(offer: detailOffer)
+                        self.viewControllerHolder?.present(style: .fullScreen) {
+                            OfferDetailView(viewModel: detailVM)
+                        }
+                    }
+                    catch {
+                        print("❌ Error - \(error.localizedDescription)")
+                    }
                 }
             }
             .fontWeight(.medium)

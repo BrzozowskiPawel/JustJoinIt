@@ -1,16 +1,17 @@
 //
-//  OfferCellViewModel.swift
+//  DetailViewModel.swift
 //  JustJoinIt
 //
-//  Created by Paweł Brzozowski on 08/10/2022.
+//  Created by Paweł Brzozowski on 10/10/2022.
 //
 
 import Foundation
 import MapKit
-class OfferCellViewModel {
-    private let offer: Offer
+
+class DetailViewModel {
+    private let offer: DetailOffer
     
-    init(offer: Offer) {
+    init(offer: DetailOffer) {
         self.offer = offer
     }
     
@@ -122,13 +123,5 @@ class OfferCellViewModel {
         let rangeMaxRounded = (Double(rangeMax) / 1000.0).roundedTo(toPlaces: 1)
         
         return "\(rangeMinRounded)k - \(rangeMaxRounded)k \(currency.uppercased())"
-    }
-}
-
-extension Double {
-    /// Rounds the double to decimal places value
-    func roundedTo(toPlaces places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return (self * divisor).rounded() / divisor
     }
 }

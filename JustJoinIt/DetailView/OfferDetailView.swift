@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OfferDetailView: View {
-    let viewModel: OfferCellViewModel
+    let viewModel: DetailViewModel
     var body: some View {
         VStack(spacing: 0) {
             VStack {
@@ -60,14 +60,14 @@ struct OfferDetailView: View {
     }
 }
 
-struct OfferDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        OfferDetailView(viewModel: OfferCellViewModel.mockVM())
-    }
-}
+//struct OfferDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OfferDetailView(viewModel: OfferCellViewModel.mockVM())
+//    }
+//}
 
 private struct InfoTails: View {
-    let vm: OfferCellViewModel
+    let vm: DetailViewModel
     var body: some View {
         VStack(spacing: -1) {
             InfoTailRowComponent(
@@ -84,7 +84,7 @@ private struct InfoTails: View {
 }
 private struct InfoTailRowComponent: View {
     let firstTile, secondTile: InfoTailType
-    let vm: OfferCellViewModel
+    let vm: DetailViewModel
     var body: some View {
         VStack {
             HStack(spacing: 0) {
@@ -112,10 +112,10 @@ enum InfoTailType {
     case added
 }
 private struct InfoTailSingleComponent: View {
-    let vm: OfferCellViewModel
+    let vm: DetailViewModel
     private let type: InfoTailType
     
-    init(infoTailType: InfoTailType, vm: OfferCellViewModel) {
+    init(infoTailType: InfoTailType, vm: DetailViewModel) {
         self.type = infoTailType
         self.vm = vm
     }

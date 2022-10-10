@@ -30,7 +30,7 @@ struct ContentView: View {
             .onAppear {
                 Task {
                     do {
-                        offers = try await NetworkManager.shared.getOffers(atUrl: RepoURL.offers)
+                        offers = try await NetworkManager.shared.getOffers(atUrl:URLs.offers())
                     }
                     catch {
                         print("❌ Error - \(error.localizedDescription)")

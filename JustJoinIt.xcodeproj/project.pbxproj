@@ -18,6 +18,8 @@
 		E5A0795728EF81A100786847 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A0795628EF81A100786847 /* Filters.swift */; };
 		E5AA80FB28F1DD1800B0366F /* OfferDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */; };
 		E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */; };
+		E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */; };
+		E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */; };
 		E5C3E31E28F3106C009ED0D4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3E31D28F3106C009ED0D4 /* MapView.swift */; };
 		E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */; };
 		E5DA282928ED676F00A17AEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA282828ED676F00A17AEF /* ContentView.swift */; };
@@ -38,6 +40,8 @@
 		E5A0795628EF81A100786847 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailView.swift; sourceTree = "<group>"; };
 		E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Modal+FullScreen.swift"; sourceTree = "<group>"; };
+		E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOffer.swift; sourceTree = "<group>"; };
+		E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E5C3E31D28F3106C009ED0D4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E5DA282328ED676F00A17AEF /* JustJoinIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustJoinIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustJoinItApp.swift; sourceTree = "<group>"; };
@@ -81,7 +85,6 @@
 			children = (
 				E53FA6A228F04E8E00AD1DBB /* OffersTable.swift */,
 				E54B696228F084C90024B3DB /* OfferCellView.swift */,
-				E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */,
 			);
 			path = OfferTable;
 			sourceTree = "<group>";
@@ -111,9 +114,19 @@
 			path = DetailView;
 			sourceTree = "<group>";
 		};
+		E5B38C3D28F4C06B00B77A63 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */,
+				E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E5DA281A28ED676F00A17AEF = {
 			isa = PBXGroup;
 			children = (
+				E5B38C3D28F4C06B00B77A63 /* ViewModels */,
 				E5DA282528ED676F00A17AEF /* JustJoinIt */,
 				E506181C28EF40280020C89F /* Extensions */,
 				E581DE7528F18D8F00DAC8D4 /* Mocks */,
@@ -142,6 +155,7 @@
 				E5DA282A28ED677600A17AEF /* Assets.xcassets */,
 				E5DA282C28ED677600A17AEF /* Preview Content */,
 				E5DA283428ED683600A17AEF /* Offer.swift */,
+				E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */,
 			);
 			path = JustJoinIt;
 			sourceTree = "<group>";
@@ -224,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */,
 				E552729B28F236FC006DAB63 /* Color+Random.swift in Sources */,
+				E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */,
 				E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */,
 				E5AA80FB28F1DD1800B0366F /* OfferDetailView.swift in Sources */,
 				E5A0795728EF81A100786847 /* Filters.swift in Sources */,
