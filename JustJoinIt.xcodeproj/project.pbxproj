@@ -18,6 +18,7 @@
 		E5A0795728EF81A100786847 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A0795628EF81A100786847 /* Filters.swift */; };
 		E5AA80FB28F1DD1800B0366F /* OfferDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */; };
 		E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */; };
+		E5C3E31E28F3106C009ED0D4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3E31D28F3106C009ED0D4 /* MapView.swift */; };
 		E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */; };
 		E5DA282928ED676F00A17AEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA282828ED676F00A17AEF /* ContentView.swift */; };
 		E5DA282B28ED677600A17AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DA282A28ED677600A17AEF /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		E5A0795628EF81A100786847 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailView.swift; sourceTree = "<group>"; };
 		E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Modal+FullScreen.swift"; sourceTree = "<group>"; };
+		E5C3E31D28F3106C009ED0D4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E5DA282328ED676F00A17AEF /* JustJoinIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustJoinIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustJoinItApp.swift; sourceTree = "<group>"; };
 		E5DA282828ED676F00A17AEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */,
+				E5C3E31D28F3106C009ED0D4 /* MapView.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				E53FA6A328F04E8E00AD1DBB /* OffersTable.swift in Sources */,
 				E506181B28EF3D1D0020C89F /* TopBarView.swift in Sources */,
 				E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */,
+				E5C3E31E28F3106C009ED0D4 /* MapView.swift in Sources */,
 				E581DE7728F18DAC00DAC8D4 /* OfferCellViewModel+Mock.swift in Sources */,
 				E5DA283528ED683600A17AEF /* Offer.swift in Sources */,
 				E5DA282928ED676F00A17AEF /* ContentView.swift in Sources */,
