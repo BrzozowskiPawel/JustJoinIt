@@ -20,7 +20,7 @@ class OfferCellViewModel {
                 center: CLLocationCoordinate2D(
                     latitude: Double(offer.latitude) ?? 0,
                     longitude: Double(offer.longitude) ?? 0),
-                latitudinalMeters: 500, longitudinalMeters: 500),
+                latitudinalMeters: 1000, longitudinalMeters: 1000),
             places: [
                 Place(
                     name: offer.title,
