@@ -70,7 +70,11 @@ class OfferCellViewModel {
     }
     
     func getWorkplace() -> String {
-        return offer.workplace_type
+        let workplace = String(offer.workplace_type.map {
+            $0 == " " ? "+" : $0
+        })
+        
+        return workplace.capitalized
     }
     
     func getLocation() -> String {
@@ -89,9 +93,12 @@ class OfferCellViewModel {
             guard let rangeMin = employment.salary?.from,
                     let rangeMax = employment.salary?.to,
                     let currency = employment.salary?.currency else {
-                return employmentTypes.append("Undisclosed Salary - \(employment.type)")
+                return employmentTypes.append("Undisclosed Salary")
             }
-            employmentTypes.append("\(rangeMin) - \(rangeMax)k \(currency.uppercased()) - \(employment.type)")
+            
+            let employment = employment.type == "b2b" ? employment.type.uppercased() : employment.type.capitalized
+            
+            employmentTypes.append("\(rangeMin) - \(rangeMax) \(currency.uppercased()) - \(employment)")
         }
         return employmentTypes
     }
