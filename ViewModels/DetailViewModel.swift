@@ -1,16 +1,17 @@
 //
-//  OfferCellViewModel.swift
+//  DetailViewModel.swift
 //  JustJoinIt
 //
-//  Created by Paweł Brzozowski on 08/10/2022.
+//  Created by Paweł Brzozowski on 10/10/2022.
 //
 
 import Foundation
 import MapKit
-class OfferCellViewModel {
-    private let offer: Offer
+
+class DetailViewModel {
+    private let offer: DetailOffer
     
-    init(offer: Offer) {
+    init(offer: DetailOffer) {
         self.offer = offer
     }
     
@@ -70,7 +71,11 @@ class OfferCellViewModel {
     }
     
     func getWorkplace() -> String {
-        return offer.workplace_type
+        let workplace = String(offer.workplace_type.map {
+            $0 == " " ? "+" : $0
+        })
+        
+        return workplace.capitalized
     }
     
     func getLocation() -> String {
@@ -89,9 +94,12 @@ class OfferCellViewModel {
             guard let rangeMin = employment.salary?.from,
                     let rangeMax = employment.salary?.to,
                     let currency = employment.salary?.currency else {
-                return employmentTypes.append("Undisclosed Salary - \(employment.type)")
+                return employmentTypes.append("Undisclosed Salary")
             }
-            employmentTypes.append("\(rangeMin) - \(rangeMax)k \(currency.uppercased()) - \(employment.type)")
+            
+            let employment = employment.type == "b2b" ? employment.type.uppercased() : employment.type.capitalized
+            
+            employmentTypes.append("\(rangeMin) - \(rangeMax) \(currency.uppercased()) - \(employment)")
         }
         return employmentTypes
     }
@@ -115,13 +123,5 @@ class OfferCellViewModel {
         let rangeMaxRounded = (Double(rangeMax) / 1000.0).roundedTo(toPlaces: 1)
         
         return "\(rangeMinRounded)k - \(rangeMaxRounded)k \(currency.uppercased())"
-    }
-}
-
-extension Double {
-    /// Rounds the double to decimal places value
-    func roundedTo(toPlaces places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return (self * divisor).rounded() / divisor
     }
 }

@@ -18,12 +18,17 @@
 		E5A0795728EF81A100786847 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A0795628EF81A100786847 /* Filters.swift */; };
 		E5AA80FB28F1DD1800B0366F /* OfferDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */; };
 		E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */; };
+		E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */; };
+		E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */; };
+		E5B38C4228F4C53100B77A63 /* DetailViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C4128F4C53100B77A63 /* DetailViewModel+Mock.swift */; };
 		E5C3E31E28F3106C009ED0D4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3E31D28F3106C009ED0D4 /* MapView.swift */; };
 		E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */; };
 		E5DA282928ED676F00A17AEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA282828ED676F00A17AEF /* ContentView.swift */; };
 		E5DA282B28ED677600A17AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DA282A28ED677600A17AEF /* Assets.xcassets */; };
 		E5DA282E28ED677600A17AEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DA282D28ED677600A17AEF /* Preview Assets.xcassets */; };
 		E5DA283528ED683600A17AEF /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA283428ED683600A17AEF /* Offer.swift */; };
+		E5E2A63028F8A07300E7A566 /* TechStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2A62F28F8A07300E7A566 /* TechStack.swift */; };
+		E5E2A63328F8A13500E7A566 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = E5E2A63228F8A13500E7A566 /* QGrid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,9 @@
 		E5A0795628EF81A100786847 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailView.swift; sourceTree = "<group>"; };
 		E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Modal+FullScreen.swift"; sourceTree = "<group>"; };
+		E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOffer.swift; sourceTree = "<group>"; };
+		E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		E5B38C4128F4C53100B77A63 /* DetailViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewModel+Mock.swift"; sourceTree = "<group>"; };
 		E5C3E31D28F3106C009ED0D4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E5DA282328ED676F00A17AEF /* JustJoinIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustJoinIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustJoinItApp.swift; sourceTree = "<group>"; };
@@ -45,6 +53,7 @@
 		E5DA282A28ED677600A17AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DA282D28ED677600A17AEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5DA283428ED683600A17AEF /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		E5E2A62F28F8A07300E7A566 /* TechStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E2A63328F8A13500E7A566 /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +91,6 @@
 			children = (
 				E53FA6A228F04E8E00AD1DBB /* OffersTable.swift */,
 				E54B696228F084C90024B3DB /* OfferCellView.swift */,
-				E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */,
 			);
 			path = OfferTable;
 			sourceTree = "<group>";
@@ -90,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E581DE7628F18DAC00DAC8D4 /* OfferCellViewModel+Mock.swift */,
+				E5B38C4128F4C53100B77A63 /* DetailViewModel+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -105,15 +115,26 @@
 		E5AA80F928F1DD0500B0366F /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				E5E2A62E28F89F9400E7A566 /* TechStack */,
 				E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */,
 				E5C3E31D28F3106C009ED0D4 /* MapView.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
 		};
+		E5B38C3D28F4C06B00B77A63 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */,
+				E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E5DA281A28ED676F00A17AEF = {
 			isa = PBXGroup;
 			children = (
+				E5B38C3D28F4C06B00B77A63 /* ViewModels */,
 				E5DA282528ED676F00A17AEF /* JustJoinIt */,
 				E506181C28EF40280020C89F /* Extensions */,
 				E581DE7528F18D8F00DAC8D4 /* Mocks */,
@@ -142,6 +163,7 @@
 				E5DA282A28ED677600A17AEF /* Assets.xcassets */,
 				E5DA282C28ED677600A17AEF /* Preview Content */,
 				E5DA283428ED683600A17AEF /* Offer.swift */,
+				E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */,
 			);
 			path = JustJoinIt;
 			sourceTree = "<group>";
@@ -152,6 +174,14 @@
 				E5DA282D28ED677600A17AEF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E5E2A62E28F89F9400E7A566 /* TechStack */ = {
+			isa = PBXGroup;
+			children = (
+				E5E2A62F28F8A07300E7A566 /* TechStack.swift */,
+			);
+			path = TechStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +200,9 @@
 			dependencies = (
 			);
 			name = JustJoinIt;
+			packageProductDependencies = (
+				E5E2A63228F8A13500E7A566 /* QGrid */,
+			);
 			productName = JustJoinIt;
 			productReference = E5DA282328ED676F00A17AEF /* JustJoinIt.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +231,9 @@
 				Base,
 			);
 			mainGroup = E5DA281A28ED676F00A17AEF;
+			packageReferences = (
+				E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = E5DA282428ED676F00A17AEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,12 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */,
 				E552729B28F236FC006DAB63 /* Color+Random.swift in Sources */,
+				E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */,
+				E5B38C4228F4C53100B77A63 /* DetailViewModel+Mock.swift in Sources */,
 				E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */,
 				E5AA80FB28F1DD1800B0366F /* OfferDetailView.swift in Sources */,
 				E5A0795728EF81A100786847 /* Filters.swift in Sources */,
 				E53FA6A328F04E8E00AD1DBB /* OffersTable.swift in Sources */,
 				E506181B28EF3D1D0020C89F /* TopBarView.swift in Sources */,
+				E5E2A63028F8A07300E7A566 /* TechStack.swift in Sources */,
 				E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */,
 				E5C3E31E28F3106C009ED0D4 /* MapView.swift in Sources */,
 				E581DE7728F18DAC00DAC8D4 /* OfferCellViewModel+Mock.swift in Sources */,
@@ -441,6 +481,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5E2A63228F8A13500E7A566 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5DA281B28ED676F00A17AEF /* Project object */;
 }
