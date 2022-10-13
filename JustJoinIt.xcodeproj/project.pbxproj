@@ -27,6 +27,8 @@
 		E5DA282B28ED677600A17AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DA282A28ED677600A17AEF /* Assets.xcassets */; };
 		E5DA282E28ED677600A17AEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DA282D28ED677600A17AEF /* Preview Assets.xcassets */; };
 		E5DA283528ED683600A17AEF /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA283428ED683600A17AEF /* Offer.swift */; };
+		E5E2A63028F8A07300E7A566 /* TechStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2A62F28F8A07300E7A566 /* TechStack.swift */; };
+		E5E2A63328F8A13500E7A566 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = E5E2A63228F8A13500E7A566 /* QGrid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,7 @@
 		E5DA282A28ED677600A17AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DA282D28ED677600A17AEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5DA283428ED683600A17AEF /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		E5E2A62F28F8A07300E7A566 /* TechStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E2A63328F8A13500E7A566 /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,7 @@
 		E5AA80F928F1DD0500B0366F /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				E5E2A62E28F89F9400E7A566 /* TechStack */,
 				E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */,
 				E5C3E31D28F3106C009ED0D4 /* MapView.swift */,
 			);
@@ -171,6 +176,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E5E2A62E28F89F9400E7A566 /* TechStack */ = {
+			isa = PBXGroup;
+			children = (
+				E5E2A62F28F8A07300E7A566 /* TechStack.swift */,
+			);
+			path = TechStack;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +200,9 @@
 			dependencies = (
 			);
 			name = JustJoinIt;
+			packageProductDependencies = (
+				E5E2A63228F8A13500E7A566 /* QGrid */,
+			);
 			productName = JustJoinIt;
 			productReference = E5DA282328ED676F00A17AEF /* JustJoinIt.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,9 @@
 				Base,
 			);
 			mainGroup = E5DA281A28ED676F00A17AEF;
+			packageReferences = (
+				E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = E5DA282428ED676F00A17AEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -250,6 +269,7 @@
 				E5A0795728EF81A100786847 /* Filters.swift in Sources */,
 				E53FA6A328F04E8E00AD1DBB /* OffersTable.swift in Sources */,
 				E506181B28EF3D1D0020C89F /* TopBarView.swift in Sources */,
+				E5E2A63028F8A07300E7A566 /* TechStack.swift in Sources */,
 				E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */,
 				E5C3E31E28F3106C009ED0D4 /* MapView.swift in Sources */,
 				E581DE7728F18DAC00DAC8D4 /* OfferCellViewModel+Mock.swift in Sources */,
@@ -461,6 +481,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5E2A63228F8A13500E7A566 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5DA281B28ED676F00A17AEF /* Project object */;
 }
