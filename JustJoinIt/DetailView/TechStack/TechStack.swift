@@ -15,6 +15,7 @@ struct TechStack: View {
         VStack(spacing: 0){
             HStack {
                 Text("Tech stack")
+                    .font(.system(size: 26))
                     .padding(.leading, 16)
                     .font(.headline)
                     .bold()

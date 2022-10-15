@@ -31,6 +31,10 @@ class DetailViewModel {
             ])
     }
     
+    func getDescription() -> String {
+        return offer.body
+    }
+    
     func getIdentifiableSkills() -> [IdentifiableSkill] {
         var identifiableSkills = [IdentifiableSkill]()
         offer.skills.forEach { identifiableSkills.append(IdentifiableSkill(skill: $0))}

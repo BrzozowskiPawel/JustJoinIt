@@ -19,6 +19,7 @@
 		E5AA80FB28F1DD1800B0366F /* OfferDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FA28F1DD1800B0366F /* OfferDetailView.swift */; };
 		E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */; };
 		E5B0CA5228FB277B00064216 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0CA5128FB277B00064216 /* DescriptionView.swift */; };
+		E5B0CA5528FB298800064216 /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = E5B0CA5428FB298800064216 /* RichText */; };
 		E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */; };
 		E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */; };
 		E5B38C4228F4C53100B77A63 /* DetailViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B38C4128F4C53100B77A63 /* DetailViewModel+Mock.swift */; };
@@ -64,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5E2A63328F8A13500E7A566 /* QGrid in Frameworks */,
+				E5B0CA5528FB298800064216 /* RichText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +215,7 @@
 			name = JustJoinIt;
 			packageProductDependencies = (
 				E5E2A63228F8A13500E7A566 /* QGrid */,
+				E5B0CA5428FB298800064216 /* RichText */,
 			);
 			productName = JustJoinIt;
 			productReference = E5DA282328ED676F00A17AEF /* JustJoinIt.app */;
@@ -244,6 +247,7 @@
 			mainGroup = E5DA281A28ED676F00A17AEF;
 			packageReferences = (
 				E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */,
+				E5B0CA5328FB298800064216 /* XCRemoteSwiftPackageReference "RichText" */,
 			);
 			productRefGroup = E5DA282428ED676F00A17AEF /* Products */;
 			projectDirPath = "";
@@ -495,6 +499,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E5B0CA5328FB298800064216 /* XCRemoteSwiftPackageReference "RichText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/RichText";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Q-Mobile/QGrid";
@@ -506,6 +518,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E5B0CA5428FB298800064216 /* RichText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5B0CA5328FB298800064216 /* XCRemoteSwiftPackageReference "RichText" */;
+			productName = RichText;
+		};
 		E5E2A63228F8A13500E7A566 /* QGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E5E2A63128F8A13500E7A566 /* XCRemoteSwiftPackageReference "QGrid" */;

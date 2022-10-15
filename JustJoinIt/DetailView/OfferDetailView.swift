@@ -57,6 +57,8 @@ struct OfferDetailView: View {
             
             TechStack(vm: viewModel)
             
+            DescriptionView(vm: viewModel)
+            
         }
         .background(.gray.opacity(0.1))
     }

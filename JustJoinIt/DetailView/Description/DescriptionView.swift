@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RichText
 
 struct DescriptionView: View {
     let vm: DetailViewModel
@@ -14,6 +15,7 @@ struct DescriptionView: View {
         VStack(spacing: 0){
             HStack {
                 Text("Description ")
+                    .font(.system(size: 26))
                     .padding(.leading, 16)
                     .font(.headline)
                     .bold()
@@ -30,6 +32,20 @@ struct DescriptionView: View {
             }
             Divider()
                 .padding(.vertical, 8.0)
+            
+            RichText(html: vm.getDescription())
+                .lineHeight(120)
+                .colorScheme(.auto)
+                .imageRadius(12)
+                .fontType(.system)
+                .foregroundColor(light: Color.primary, dark: Color.primary)
+                .linkColor(light: Color.blue, dark: Color.blue)
+                .colorPreference(forceColor: .onlyLinks)
+                .linkOpenType(.SFSafariView())
+                .customCSS("")
+                .placeholder {
+                    Text("loading")
+                }
         }
     }
 }
