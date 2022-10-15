@@ -10,7 +10,7 @@ import SwiftUI
 struct OfferDetailView: View {
     let viewModel: DetailViewModel
     var body: some View {
-        VStack(spacing: 0) {
+        ScrollView  {
             VStack {
                 VStack(alignment: .leading) {
                     NavigationButtons()
@@ -56,8 +56,9 @@ struct OfferDetailView: View {
             MapView(data: viewModel.getMapData())
             
             TechStack(vm: viewModel)
-            Spacer()
+            
         }
+        .background(.gray.opacity(0.1))
     }
 }
 

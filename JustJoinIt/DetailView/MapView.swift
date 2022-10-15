@@ -40,7 +40,7 @@ struct MapView: View {
                   .clipShape(Circle())
             }
         }
-        .frame(height: 250)
+        .frame(height: 200)
     }
 }
 

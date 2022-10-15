@@ -47,6 +47,7 @@ class IdentifiableSkill: Identifiable {
     }
     
     func getSeniority() -> String {
+        print("\(name) Level: \(level)")
         switch level {
         case 1:
             return "Nice to have"
@@ -67,8 +68,8 @@ class IdentifiableSkill: Identifiable {
         return name
     }
     
-    func getLevel() -> String {
-        return "\(level)"
+    func getLevel() -> Int {
+        return level
     }
 
 }
@@ -84,12 +85,13 @@ struct TechStackCell: View {
     var body: some View {
         HStack {
             VStack (alignment: .leading) {
-                TechnologyDotIndicator()
+                TechnologyDotIndicator(
+                    level: skill.getLevel())
                 Text(skill.getName())
-                    .font(.system(size: 20))
+                    .font(.system(size: 18))
                     .fontWeight(.semibold)
                 Text(skill.getSeniority())
-                    .font(.system(size: 15))
+                    .font(.system(size: 14))
                     .fontWeight(.light)
                     .foregroundColor(.gray)
             }
@@ -100,12 +102,13 @@ struct TechStackCell: View {
 }
 
 struct TechnologyDotIndicator: View {
-    
+    let level: Int
     var body: some View {
+        
         HStack {
-            ForEach((1...5), id: \.self) { _ in
+            ForEach((1...5), id: \.self) { index in
                 Circle()
-                    .fill(.red)
+                    .fill(level >= index ? .red : .gray)
                     .frame(width: 10, height: 10)
             }
         }
