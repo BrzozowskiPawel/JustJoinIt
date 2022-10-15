@@ -46,13 +46,13 @@ extension OfferCellViewModel {
             skills: [
                 Skill(
                     name: "Git",
-                    lavel: 3),
+                    level: 3),
                 Skill(
                     name: "JIRA",
-                    lavel: 3),
+                    level: 3),
                 Skill(
                     name: "Swift",
-                    lavel: 3)],
+                    level: 3)],
             remote: false,
             multilocation: [
                 Location(

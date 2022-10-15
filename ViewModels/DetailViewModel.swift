@@ -31,6 +31,23 @@ class DetailViewModel {
             ])
     }
     
+    func getDescription() -> String {
+        return offer.body
+    }
+    
+    func getIdentifiableSkills() -> [IdentifiableSkill] {
+        var identifiableSkills = [IdentifiableSkill]()
+        offer.skills.forEach { identifiableSkills.append(IdentifiableSkill(skill: $0))}
+        return identifiableSkills
+    }
+    
+    func isRemoteInterview() -> Bool {
+        return offer.remote_interview
+    }
+    func getTechStackHeight() -> CGFloat {
+        return CGFloat(offer.skills.count) / 2 * 90
+    }
+    
     func getCompanyName() -> String {
         return self.offer.company_name
     }
