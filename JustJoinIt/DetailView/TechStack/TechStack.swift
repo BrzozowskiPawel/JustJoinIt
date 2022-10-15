@@ -21,7 +21,7 @@ struct TechStack: View {
                 Spacer()
             }
             Divider()
-                .padding(.vertical, 3.0)
+                .padding(.vertical, 8.0)
             
             QGrid(vm.getIdentifiableSkills(),
                   columns: 2,

@@ -37,6 +37,9 @@ class DetailViewModel {
         return identifiableSkills
     }
     
+    func isRemoteInterview() -> Bool {
+        return offer.remote_interview
+    }
     func getTechStackHeight() -> CGFloat {
         return CGFloat(offer.skills.count) / 2 * 90
     }
