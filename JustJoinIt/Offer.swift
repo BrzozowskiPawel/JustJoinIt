@@ -47,7 +47,7 @@ struct Salary: Codable {
 
 struct Skill: Codable {
     let name: String
-    let lavel: Int?
+    let level: Int
 }
 
 struct Location: Codable {

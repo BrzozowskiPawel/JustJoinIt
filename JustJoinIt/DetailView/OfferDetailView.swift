@@ -55,16 +55,18 @@ struct OfferDetailView: View {
             
             MapView(data: viewModel.getMapData())
             
+            TechStack(vm: viewModel)
             Spacer()
         }
     }
 }
 
-//struct OfferDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OfferDetailView(viewModel: OfferCellViewModel.mockVM())
-//    }
-//}
+struct OfferDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        OfferDetailView(
+            viewModel: DetailViewModel.mockVM())
+    }
+}
 
 private struct InfoTails: View {
     let vm: DetailViewModel

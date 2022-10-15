@@ -6,15 +6,109 @@
 //
 
 import SwiftUI
+import QGrid
 
 struct TechStack: View {
+    let vm: DetailViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0){
+            HStack {
+                Text("Tech stack")
+                    .padding(.leading, 16)
+                    .font(.headline)
+                    .bold()
+                Spacer()
+            }
+            Divider()
+                .padding(.vertical, 3.0)
+            
+            QGrid(vm.getIdentifiableSkills(),
+                  columns: 2,
+                  vSpacing: 10,
+                  hSpacing: 0,
+                  vPadding: 10,
+                  hPadding: 0) { item in
+                TechStackCell(skill: item)
+            }
+            .frame(height: vm.getTechStackHeight())
+            
+        }
     }
+}
+
+class IdentifiableSkill: Identifiable {
+    private let name: String
+    private let level: Int
+    
+    init(skill: Skill) {
+        self.name = skill.name
+        self.level = skill.level
+    }
+    
+    func getSeniority() -> String {
+        switch level {
+        case 1:
+            return "Nice to have"
+        case 2:
+            return "Junior"
+        case 3:
+            return "Regular"
+        case 4:
+            return "Advanced"
+        case 5:
+            return "Master"
+        default:
+            return "Error: lvl= \(level)"
+        }
+    }
+    
+    func getName() -> String {
+        return name
+    }
+    
+    func getLevel() -> String {
+        return "\(level)"
+    }
+
 }
 
 struct TechStack_Previews: PreviewProvider {
     static var previews: some View {
-        TechStack()
+        TechStack(vm: DetailViewModel.mockVM())
     }
 }
+
+struct TechStackCell: View {
+    let skill: IdentifiableSkill
+    var body: some View {
+        HStack {
+            VStack (alignment: .leading) {
+                TechnologyDotIndicator()
+                Text(skill.getName())
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                Text(skill.getSeniority())
+                    .font(.system(size: 15))
+                    .fontWeight(.light)
+                    .foregroundColor(.gray)
+            }
+            .padding(.leading, 16)
+            Spacer()
+        }
+    }
+}
+
+struct TechnologyDotIndicator: View {
+    
+    var body: some View {
+        HStack {
+            ForEach((1...5), id: \.self) { _ in
+                Circle()
+                    .fill(.red)
+                    .frame(width: 10, height: 10)
+            }
+        }
+    }
+}
+

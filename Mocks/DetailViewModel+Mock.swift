@@ -43,13 +43,19 @@ extension DetailViewModel {
             skills: [
                 Skill(
                     name: "Git",
-                    lavel: 3),
+                    level: 1),
                 Skill(
                     name: "JIRA",
-                    lavel: 3),
+                    level: 2),
+                Skill(
+                    name: "C++",
+                    level: 3),
+                Skill(
+                    name: "RxSwift",
+                    level: 4),
                 Skill(
                     name: "Swift",
-                    lavel: 3)],
+                    level: 3)],
             remote: true,
             employment_types: [
                 EmploymentType(
