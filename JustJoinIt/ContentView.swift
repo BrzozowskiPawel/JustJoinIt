@@ -15,7 +15,7 @@ struct ContentView: View {
             VStack {
                 VStack {
                     TopBarView()
-                    FiltersView()
+//                    FiltersView()
                     OffersTable(offersArray: offers)
                 }
             }
