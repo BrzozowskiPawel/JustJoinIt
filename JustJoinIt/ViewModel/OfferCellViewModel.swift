@@ -18,21 +18,21 @@ class OfferCellViewModel {
         return offer.id
     }
     
-    func getMapData() -> MapViewData {
-        return MapViewData(
-            region: MKCoordinateRegion(
-                center: CLLocationCoordinate2D(
-                    latitude: Double(offer.latitude) ?? 0,
-                    longitude: Double(offer.longitude) ?? 0),
-                latitudinalMeters: 1000, longitudinalMeters: 1000),
-            places: [
-                Place(
-                    name: offer.title,
-                    coordinate: CLLocationCoordinate2D(
-                        latitude:  Double(offer.latitude) ?? 0,
-                        longitude: Double(offer.longitude) ?? 0))
-            ])
-    }
+//    func getMapData() -> MapViewData {
+//        return MapViewData(
+//            region: MKCoordinateRegion(
+//                center: CLLocationCoordinate2D(
+//                    latitude: Double(offer.latitude) ?? 0,
+//                    longitude: Double(offer.longitude) ?? 0),
+//                latitudinalMeters: 1000, longitudinalMeters: 1000),
+//            places: [
+//                Place(
+//                    name: offer.title,
+//                    coordinate: CLLocationCoordinate2D(
+//                        latitude:  Double(offer.latitude) ?? 0,
+//                        longitude: Double(offer.longitude) ?? 0))
+//            ])
+//    }
     
     func getCompanyName() -> String {
         return self.offer.company_name

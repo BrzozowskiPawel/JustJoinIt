@@ -15,31 +15,31 @@ class DetailViewModel {
         self.offer = offer
     }
     
-    func getMapData() -> MapViewData {
-        return MapViewData(
-            region: MKCoordinateRegion(
-                center: CLLocationCoordinate2D(
-                    latitude: Double(offer.latitude) ?? 0,
-                    longitude: Double(offer.longitude) ?? 0),
-                latitudinalMeters: 1000, longitudinalMeters: 1000),
-            places: [
-                Place(
-                    name: offer.title,
-                    coordinate: CLLocationCoordinate2D(
-                        latitude:  Double(offer.latitude) ?? 0,
-                        longitude: Double(offer.longitude) ?? 0))
-            ])
-    }
+//    func getMapData() -> MapViewData {
+//        return MapViewData(
+//            region: MKCoordinateRegion(
+//                center: CLLocationCoordinate2D(
+//                    latitude: Double(offer.latitude) ?? 0,
+//                    longitude: Double(offer.longitude) ?? 0),
+//                latitudinalMeters: 1000, longitudinalMeters: 1000),
+//            places: [
+//                Place(
+//                    name: offer.title,
+//                    coordinate: CLLocationCoordinate2D(
+//                        latitude:  Double(offer.latitude) ?? 0,
+//                        longitude: Double(offer.longitude) ?? 0))
+//            ])
+//    }
     
     func getDescription() -> String {
         return offer.body
     }
     
-    func getIdentifiableSkills() -> [IdentifiableSkill] {
-        var identifiableSkills = [IdentifiableSkill]()
-        offer.skills.forEach { identifiableSkills.append(IdentifiableSkill(skill: $0))}
-        return identifiableSkills
-    }
+//    func getIdentifiableSkills() -> [IdentifiableSkill] {
+//        var identifiableSkills = [IdentifiableSkill]()
+//        offer.skills.forEach { identifiableSkills.append(IdentifiableSkill(skill: $0))}
+//        return identifiableSkills
+//    }
     
     func isRemoteInterview() -> Bool {
         return offer.remote_interview
