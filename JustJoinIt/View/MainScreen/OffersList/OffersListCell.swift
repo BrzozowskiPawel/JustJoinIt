@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OffersListCell: View {
+    @State private var showingSheet = false
     private let viewModel: OfferListCellViewModel
     
     init(for offer: Offer) {
@@ -15,25 +16,28 @@ struct OffersListCell: View {
     }
     
     var body: some View {
-        
-        HStack {
-            CompanyLogo(logoURL: viewModel.getCompanyLogoUrl())
-            
-            OfferMainInfo(vm: viewModel)
-                .padding(.vertical, 8)
-            Spacer()
-            OfferInfoRightPanel(
-                isNew: viewModel.isNewOffer(),
-                location: viewModel.getLocation())
-                .padding(.trailing, 8)
-                .padding(.vertical, 8)
+        Button {
+            showingSheet.toggle()
+        } label: {
+            HStack {
+                CompanyLogo(logoURL: viewModel.getCompanyLogoUrl())
+                OfferInfoMainPanel(
+                    title: viewModel.getOfferTitle(),
+                    salary: viewModel.getSalary())
+                Spacer()
+                OfferInfoRightPanel(
+                    isNew: viewModel.isNewOffer(),
+                    location: viewModel.getLocation())
+            }
+            .background(.white)
+            .cornerRadius(6)
+            .frame(height: 60)
+            .padding(.horizontal, 6)
+            .padding(.top, 5)
         }
-        .background(.white)
-        .cornerRadius(6)
-        .frame(height: 60)
-        .padding(.horizontal, 6)
-        .padding(.top, 5)
-        
+        .sheet(isPresented: $showingSheet) {
+            DetailScreen()
+        }
     }
 }
 
@@ -44,40 +48,7 @@ struct OffersListCell_Previews: PreviewProvider {
     }
 }
 
-private struct OfferMainInfo: View {
-    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
-    
-    let vm: OfferListCellViewModel
-    var body: some View {
-        VStack (alignment: .leading){
-            
-            Button(vm.getOfferTitle()) {
-                Task {
-                    do {
-                        let url = URLs.detailOffer(for: vm.getID())
-                        let detailOffer = try await NetworkManager.shared.getDetailOffer(atUrl: url)
-                        
-                        let detailVM = DetailViewModel(offer: detailOffer)
-                        self.viewControllerHolder?.present(style: .fullScreen) {
-                            Text("Detail View")
-                        }
-                    }
-                    catch {
-                        print("❌ Error - \(error.localizedDescription)")
-                    }
-                }
-            }
-            .fontWeight(.medium)
-            .font(.system(size: 14))
-            .lineLimit(1)
-            
-            Spacer()
-            Text(vm.getSalary())
-                .foregroundColor(.green)
-                .font(.system(size: 12))
-        }
-    }
-}
+
 
 private struct CompanyLogo: View {
     let logoURL: String

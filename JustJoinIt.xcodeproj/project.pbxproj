@@ -21,6 +21,8 @@
 		E5CCD0B828FF539B003EF53F /* OffersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCD0B728FF539B003EF53F /* OffersList.swift */; };
 		E5CCD0BA28FF53A7003EF53F /* OffersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCD0B928FF53A7003EF53F /* OffersListCell.swift */; };
 		E5CCD0BE28FF5A16003EF53F /* OfferInfoRightPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCD0BD28FF5A16003EF53F /* OfferInfoRightPanel.swift */; };
+		E5CCD0C028FF5B0D003EF53F /* OfferInfoMainPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCD0BF28FF5B0D003EF53F /* OfferInfoMainPanel.swift */; };
+		E5CCD0C428FF5BE0003EF53F /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCD0C328FF5BE0003EF53F /* DetailScreen.swift */; };
 		E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */; };
 		E5DA282B28ED677600A17AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DA282A28ED677600A17AEF /* Assets.xcassets */; };
 		E5DA282E28ED677600A17AEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DA282D28ED677600A17AEF /* Preview Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		E5CCD0B728FF539B003EF53F /* OffersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersList.swift; sourceTree = "<group>"; };
 		E5CCD0B928FF53A7003EF53F /* OffersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersListCell.swift; sourceTree = "<group>"; };
 		E5CCD0BD28FF5A16003EF53F /* OfferInfoRightPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInfoRightPanel.swift; sourceTree = "<group>"; };
+		E5CCD0BF28FF5B0D003EF53F /* OfferInfoMainPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInfoMainPanel.swift; sourceTree = "<group>"; };
+		E5CCD0C328FF5BE0003EF53F /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		E5DA282328ED676F00A17AEF /* JustJoinIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustJoinIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DA282628ED676F00A17AEF /* JustJoinItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustJoinItApp.swift; sourceTree = "<group>"; };
 		E5DA282A28ED677600A17AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,8 +121,17 @@
 			isa = PBXGroup;
 			children = (
 				E5CCD0BD28FF5A16003EF53F /* OfferInfoRightPanel.swift */,
+				E5CCD0BF28FF5B0D003EF53F /* OfferInfoMainPanel.swift */,
 			);
 			path = OfferListCellComponents;
+			sourceTree = "<group>";
+		};
+		E5CCD0C128FF5BC2003EF53F /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E5CCD0C328FF5BE0003EF53F /* DetailScreen.swift */,
+			);
+			path = DetailScreen;
 			sourceTree = "<group>";
 		};
 		E5DA281A28ED676F00A17AEF = {
@@ -173,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				E5E8E9AE28FDF1C900137150 /* MainScreen */,
+				E5CCD0C128FF5BC2003EF53F /* DetailScreen */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,8 +292,10 @@
 				E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */,
 				E581DE7728F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift in Sources */,
 				E5E8E9B028FDF1F300137150 /* MainScreen.swift in Sources */,
+				E5CCD0C028FF5B0D003EF53F /* OfferInfoMainPanel.swift in Sources */,
 				E5DA283528ED683600A17AEF /* Offer.swift in Sources */,
 				E506181E28EF403B0020C89F /* View+Border.swift in Sources */,
+				E5CCD0C428FF5BE0003EF53F /* DetailScreen.swift in Sources */,
 				E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */,
 				E5CCD0B828FF539B003EF53F /* OffersList.swift in Sources */,
 				E581DE7428F1884D00DAC8D4 /* OfferCellViewModel.swift in Sources */,

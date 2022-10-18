@@ -37,6 +37,8 @@ struct OfferInfoRightPanel: View {
                     .font(.system(size: 12))
             }
         }
+        .padding(.trailing, 8)
+        .padding(.vertical, 8)
     }
 }
 
