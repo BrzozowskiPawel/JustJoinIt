@@ -13,22 +13,16 @@ class NetworkManager {
     let decoder = JSONDecoder()
 
     func getOffers(atUrl urlString: String) async throws -> [Offer] {
-        print("➡️ in getOffer")
         
         guard let url = URL(string: urlString) else {
             throw NetworkError.invalidRepoURL
         }
-
-        print("➡️ got URL")
         
         let (data, response) = try await URLSession.shared.data(from: url)
 
-        print("➡️ URL session")
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw NetworkError.invalidResponse
         }
-
-        print("➡️ get respoinse: \(response.statusCode)")
         
         do {
             let start = CFAbsoluteTimeGetCurrent()
@@ -62,22 +56,16 @@ class NetworkManager {
     }
     
     func getDetailOffer(atUrl urlString: String) async throws -> DetailOffer {
-        print("➡️ in getOffer")
         
         guard let url = URL(string: urlString) else {
             throw NetworkError.invalidRepoURL
         }
-
-        print("➡️ got URL: \(urlString)")
         
         let (data, response) = try await URLSession.shared.data(from: url)
 
-        print("➡️ URL session")
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw NetworkError.invalidResponse
         }
-
-        print("➡️ get respoinse: \(response.statusCode)")
         
         do {
             let start = CFAbsoluteTimeGetCurrent()
