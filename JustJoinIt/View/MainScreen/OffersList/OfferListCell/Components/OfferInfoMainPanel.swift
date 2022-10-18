@@ -19,6 +19,7 @@ struct OfferInfoMainPanel: View {
     var body: some View {
         VStack (alignment: .leading){
             Text(title)
+                .foregroundColor(.black)
                 .fontWeight(.medium)
                 .font(.system(size: 14))
                 .lineLimit(1)

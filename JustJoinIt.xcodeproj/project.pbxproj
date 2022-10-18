@@ -111,19 +111,18 @@
 			isa = PBXGroup;
 			children = (
 				E5CCD0B728FF539B003EF53F /* OffersList.swift */,
-				E5CCD0B928FF53A7003EF53F /* OffersListCell.swift */,
-				E5CCD0BB28FF59EB003EF53F /* OfferListCellComponents */,
+				E5CCD0BB28FF59EB003EF53F /* OfferListCell */,
 			);
 			path = OffersList;
 			sourceTree = "<group>";
 		};
-		E5CCD0BB28FF59EB003EF53F /* OfferListCellComponents */ = {
+		E5CCD0BB28FF59EB003EF53F /* OfferListCell */ = {
 			isa = PBXGroup;
 			children = (
-				E5CCD0BD28FF5A16003EF53F /* OfferInfoRightPanel.swift */,
-				E5CCD0BF28FF5B0D003EF53F /* OfferInfoMainPanel.swift */,
+				E5CCD0B928FF53A7003EF53F /* OffersListCell.swift */,
+				E5CCD0C528FF5E61003EF53F /* Components */,
 			);
-			path = OfferListCellComponents;
+			path = OfferListCell;
 			sourceTree = "<group>";
 		};
 		E5CCD0C128FF5BC2003EF53F /* DetailScreen */ = {
@@ -132,6 +131,15 @@
 				E5CCD0C328FF5BE0003EF53F /* DetailScreen.swift */,
 			);
 			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		E5CCD0C528FF5E61003EF53F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E5CCD0BD28FF5A16003EF53F /* OfferInfoRightPanel.swift */,
+				E5CCD0BF28FF5B0D003EF53F /* OfferInfoMainPanel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E5DA281A28ED676F00A17AEF = {
