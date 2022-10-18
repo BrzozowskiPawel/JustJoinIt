@@ -76,7 +76,7 @@ private struct OfferMainInfo: View {
     var body: some View {
         VStack (alignment: .leading){
             
-            Button(vm.getTitle()) {
+            Button(vm.getOfferTitle()) {
                 Task {
                     do {
                         let url = URLs.detailOffer(for: vm.getID())
