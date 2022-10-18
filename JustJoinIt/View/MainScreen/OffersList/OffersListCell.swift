@@ -22,7 +22,9 @@ struct OffersListCell: View {
             OfferMainInfo(vm: viewModel)
                 .padding(.vertical, 8)
             Spacer()
-            OfferSecondaryInfo(newOffer: viewModel.isNewOffer(), location: viewModel.getLocation())
+            OfferInfoRightPanel(
+                isNew: viewModel.isNewOffer(),
+                location: viewModel.getLocation())
                 .padding(.trailing, 8)
                 .padding(.vertical, 8)
         }
@@ -31,7 +33,7 @@ struct OffersListCell: View {
         .frame(height: 60)
         .padding(.horizontal, 6)
         .padding(.top, 5)
-        .listRowBackground(Color.clear)
+        
     }
 }
 
@@ -39,33 +41,6 @@ struct OffersListCell_Previews: PreviewProvider {
     static var previews: some View {
         let offer = OfferListCellViewModel.mockOffer()
         OffersListCell(for: offer)
-    }
-}
-
-private struct OfferSecondaryInfo: View {
-    let newOffer: Bool
-    let location: String
-    var body: some View {
-        VStack(alignment: .trailing) {
-            if(newOffer) {
-                Text("NEW")
-                    .font(.system(size: 8))
-                    .padding(.vertical, 2)
-                    .padding(.horizontal, 4.0)
-                    .foregroundColor(.gray)
-                    .background(.gray.opacity(0.3))
-                    .cornerRadius(16)
-            }
-            Spacer()
-            HStack {
-                Text(location)
-                    .foregroundColor(.gray)
-                    .font(.system(size: 12))
-                Image(systemName: "mappin.circle.fill")
-                    .foregroundColor(.gray)
-                    .font(.system(size: 12))
-            }
-        }
     }
 }
 
