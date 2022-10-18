@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopBarView: View {
+struct TopBar: View {
     @State private var darkMode: Bool = false
     var body: some View {
         HStack {
@@ -48,8 +48,8 @@ struct TopBarView: View {
     }
 }
 
-struct TopBarView_Previews: PreviewProvider {
+struct TopBar_Previews: PreviewProvider {
     static var previews: some View {
-        TopBarView()
+        TopBar()
     }
 }

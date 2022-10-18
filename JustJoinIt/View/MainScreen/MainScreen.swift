@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct MainScreen: View {
+    private let offers: [Offer]
+    
+    init(with offers: [Offer]) {
+        self.offers = offers
+    }
+    
     var body: some View {
-        Text("Main Screen")
+        VStack(spacing: 0) {
+            TopBar()
+            OffersList(for: offers)
+            Spacer()
+        }
+        
     }
 }
 
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        let mockupOffers = OfferListCellViewModel.mockOffers()
+        MainScreen(with: mockupOffers)
     }
 }

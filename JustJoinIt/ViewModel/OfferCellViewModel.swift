@@ -7,7 +7,7 @@
 
 import Foundation
 import MapKit
-class OfferCellViewModel {
+class OfferListCellViewModel {
     private let offer: Offer
     
     init(offer: Offer) {

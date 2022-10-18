@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: OfferCellViewModel Mock
-extension OfferCellViewModel {
+extension OfferListCellViewModel {
     static func mockOffer() -> Offer {
         return Offer(
             title: "iOS Developer (DDL)",
@@ -73,8 +73,15 @@ extension OfferCellViewModel {
                     street: "lufthansa-systems-ios-developer-ddl")],
             way_of_apply: "redirect")
     }
-    static func mockVM() -> OfferCellViewModel {
+    static func mockOffers() -> [Offer] {
+        var offers = [Offer]()
+        for _ in 1...5 {
+            offers.append(mockOffer())
+        }
+        return offers
+    }
+    static func mockVM() -> OfferListCellViewModel {
         let mockOffer = self.mockOffer()
-        return OfferCellViewModel(offer: mockOffer)
+        return OfferListCellViewModel(offer: mockOffer)
     }
 }

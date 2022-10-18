@@ -14,10 +14,7 @@ struct JustJoinItApp: App {
     var body: some Scene {
         WindowGroup {
             if $offers.count > 0 {
-                //                TopBarView()
-                //                FiltersView()
-                //                OffersTable(offersArray: offers)
-                MainScreen()
+                MainScreen(with: offers)
             }else {
                 SplashScreen()
                     .onAppear {
