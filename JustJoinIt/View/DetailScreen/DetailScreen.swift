@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        Button("Press to dismiss") {
-            dismiss()
+        ScrollView {
+            DetailsNavigationButtons()
+                .padding(.vertical, 8)
+                .padding(.horizontal, 8)
+            Text("HELLO!")
+            Spacer()
         }
-        .font(.title)
-        .padding()
-        .background(.black)
+        .background(.gray.opacity(0.1))
+        
     }
 }
 
