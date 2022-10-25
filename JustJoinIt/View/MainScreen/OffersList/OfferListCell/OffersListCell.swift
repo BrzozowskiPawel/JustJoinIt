@@ -11,6 +11,7 @@ struct OffersListCell: View {
     @State private var showingSheet = false
     private let viewModel: OfferListCellViewModel
     
+    
     init(for offer: Offer) {
         self.viewModel = OfferListCellViewModel(offer: offer)
     }
@@ -36,7 +37,7 @@ struct OffersListCell: View {
             .padding(.top, 5)
         }
         .sheet(isPresented: $showingSheet) {
-            DetailScreen()
+            DetailScreen(forID: viewModel.getID())
         }
     }
 }

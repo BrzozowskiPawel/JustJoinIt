@@ -15,6 +15,48 @@ class DetailViewModel {
         self.offer = offer
     }
     
+    func getStreet() -> String {
+        return offer.street
+    }
+    
+    func getTitle() -> String {
+        return offer.title
+    }
+    
+    func getWorkplace() -> String {
+        let workplace = String(offer.workplace_type.map {
+            $0 == " " ? "+" : $0
+        })
+        
+        return workplace.capitalized
+    }
+    
+    func getLocation() -> String {
+        if offer.multilocation.count > 1  {
+            return "\(offer.multilocation[0].city) +\(offer.multilocation.count)"
+        } else {
+            return offer.multilocation[0].city
+        }
+    }
+    
+    // TODO: Fix getEmplomentType and getSalary to be more generic
+    func getEmploymentTypes() -> [String] {
+        var employmentTypes = [String]()
+        offer.employment_types.forEach { employment in
+            // TODO: Fix - could be Undisclosed Salary but have a 2 or 3 work types (B2B/Permament...)
+            guard let rangeMin = employment.salary?.from,
+                  let rangeMax = employment.salary?.to,
+                  let currency = employment.salary?.currency else {
+                return employmentTypes.append("Undisclosed Salary")
+            }
+            
+            let employment = employment.type == "b2b" ? employment.type.uppercased() : employment.type.capitalized
+            
+            employmentTypes.append("\(rangeMin) - \(rangeMax) \(currency.uppercased()) - \(employment)")
+        }
+        return employmentTypes
+    }
+    
 //    func getMapData() -> MapViewData {
 //        return MapViewData(
 //            region: MKCoordinateRegion(
@@ -78,48 +120,9 @@ class DetailViewModel {
 //    func getCompanyLogoUrl() -> String {
 //        return offer.company_logo_url
 //    }
-//    
-//    func getStreet() -> String {
-//        return offer.street ?? ""
-//    }
-//    
-//    func getTitle() -> String {
-//        return offer.title
-//    }
-//    
-//    func getWorkplace() -> String {
-//        let workplace = String(offer.workplace_type.map {
-//            $0 == " " ? "+" : $0
-//        })
-//        
-//        return workplace.capitalized
-//    }
-//    
-//    func getLocation() -> String {
-//        if offer.multilocation.count > 1  {
-//            return "\(offer.multilocation[0].city) +\(offer.multilocation.count)"
-//        } else {
-//            return offer.multilocation[0].city
-//        }
-//    }
-//    
-//    // TODO: Fix getEmplomentType and getSalary to be more generic
-//    func getEmploymentTypes() -> [String] {
-//        var employmentTypes = [String]()
-//        offer.employment_types.forEach { employment in
-//            // TODO: Fix - could be Undisclosed Salary but have a 2 or 3 work types (B2B/Permament...)
-//            guard let rangeMin = employment.salary?.from,
-//                    let rangeMax = employment.salary?.to,
-//                    let currency = employment.salary?.currency else {
-//                return employmentTypes.append("Undisclosed Salary")
-//            }
-//            
-//            let employment = employment.type == "b2b" ? employment.type.uppercased() : employment.type.capitalized
-//            
-//            employmentTypes.append("\(rangeMin) - \(rangeMax) \(currency.uppercased()) - \(employment)")
-//        }
-//        return employmentTypes
-//    }
+//
+//
+//
 //    
 //    func isNewOffer() -> Bool {
 //        let formatter = ISO8601DateFormatter()

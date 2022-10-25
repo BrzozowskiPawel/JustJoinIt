@@ -8,22 +8,27 @@
 import SwiftUI
 
 struct DetailScreen: View {
+    private let offerID: String
+    // TODO: Download proper offer
+    private let model = DetailViewModel.mockVM()
+    
+    init(forID offerId: String) {
+        self.offerID = offerId
+    }
     
     var body: some View {
         ScrollView {
-            DetailsNavigationButtons()
-                .padding(.vertical, 8)
-                .padding(.horizontal, 8)
-            Text("HELLO!")
+            DetailOfferSummary(for: model)
+            
             Spacer()
         }
         .background(.gray.opacity(0.1))
-        
     }
 }
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailScreen()
+        let offer = OfferListCellViewModel.mockOffer()
+        DetailScreen(forID: offer.id)
     }
 }
