@@ -98,23 +98,28 @@ class DetailViewModel {
                         longitude: Double(offer.longitude) ?? 0))
             ])
     }
+    
+    func getTechStackHeight() -> CGFloat {
+        return CGFloat(offer.skills.count) / 2 * 90
+    }
+    
+    func getSkills() -> [IdentifiableSkill] {
+        var identifiableSkill = [IdentifiableSkill]()
+        offer.skills.forEach { identifiableSkill.append(IdentifiableSkill(for: $0)) }
+        return identifiableSkill
+    }
+    
     //
     //    func getDescription() -> String {
     //        return offer.body
     //    }
     
-    //    func getIdentifiableSkills() -> [IdentifiableSkill] {
-    //        var identifiableSkills = [IdentifiableSkill]()
-    //        offer.skills.forEach { identifiableSkills.append(IdentifiableSkill(skill: $0))}
-    //        return identifiableSkills
-    //    }
+
     
     //    func isRemoteInterview() -> Bool {
     //        return offer.remote_interview
     //    }
-    //    func getTechStackHeight() -> CGFloat {
-    //        return CGFloat(offer.skills.count) / 2 * 90
-    //    }
+
     //    
     
     //    

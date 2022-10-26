@@ -12,7 +12,8 @@ struct MapView: View {
     @State private var region: MKCoordinateRegion
     let places: [Place]
     
-    init(for data: MapViewData) {
+    init(for model: DetailViewModel) {
+        let data = model.getMapData()
         self.region = data.region
         self.places = data.places
     }

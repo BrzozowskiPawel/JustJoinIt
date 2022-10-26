@@ -18,6 +18,11 @@
 		E564CD0B2909DB6A0063FAB3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD0A2909DB6A0063FAB3 /* MapView.swift */; };
 		E564CD0D2909DC3F0063FAB3 /* MapViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD0C2909DC3F0063FAB3 /* MapViewData.swift */; };
 		E564CD0F2909DC5A0063FAB3 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD0E2909DC5A0063FAB3 /* Place.swift */; };
+		E564CD122909DCD30063FAB3 /* TechStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD112909DCD30063FAB3 /* TechStack.swift */; };
+		E564CD142909DD080063FAB3 /* TechStackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD132909DD080063FAB3 /* TechStackCell.swift */; };
+		E564CD162909DEA70063FAB3 /* TechnologyDotIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD152909DEA70063FAB3 /* TechnologyDotIndicator.swift */; };
+		E564CD182909DEF50063FAB3 /* IdentifiableSkillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD172909DEF50063FAB3 /* IdentifiableSkillViewModel.swift */; };
+		E564CD1A2909E0F30063FAB3 /* IdentifiableSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD192909E0F30063FAB3 /* IdentifiableSkill.swift */; };
 		E581DE7428F1884D00DAC8D4 /* OfferCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */; };
 		E581DE7728F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581DE7628F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift */; };
 		E599B7E42905CA31008870D6 /* DetailsNavigationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599B7E32905CA31008870D6 /* DetailsNavigationButtons.swift */; };
@@ -53,6 +58,11 @@
 		E564CD0A2909DB6A0063FAB3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E564CD0C2909DC3F0063FAB3 /* MapViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewData.swift; sourceTree = "<group>"; };
 		E564CD0E2909DC5A0063FAB3 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		E564CD112909DCD30063FAB3 /* TechStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStack.swift; sourceTree = "<group>"; };
+		E564CD132909DD080063FAB3 /* TechStackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStackCell.swift; sourceTree = "<group>"; };
+		E564CD152909DEA70063FAB3 /* TechnologyDotIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyDotIndicator.swift; sourceTree = "<group>"; };
+		E564CD172909DEF50063FAB3 /* IdentifiableSkillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableSkillViewModel.swift; sourceTree = "<group>"; };
+		E564CD192909E0F30063FAB3 /* IdentifiableSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableSkill.swift; sourceTree = "<group>"; };
 		E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellViewModel.swift; sourceTree = "<group>"; };
 		E581DE7628F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferListCellViewModel+Mock.swift"; sourceTree = "<group>"; };
 		E599B7E32905CA31008870D6 /* DetailsNavigationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNavigationButtons.swift; sourceTree = "<group>"; };
@@ -126,6 +136,16 @@
 			path = MapView;
 			sourceTree = "<group>";
 		};
+		E564CD102909DCC20063FAB3 /* TechStack */ = {
+			isa = PBXGroup;
+			children = (
+				E564CD112909DCD30063FAB3 /* TechStack.swift */,
+				E564CD132909DD080063FAB3 /* TechStackCell.swift */,
+				E564CD152909DEA70063FAB3 /* TechnologyDotIndicator.swift */,
+			);
+			path = TechStack;
+			sourceTree = "<group>";
+		};
 		E581DE7528F18D8F00DAC8D4 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +180,7 @@
 			children = (
 				E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */,
 				E5B38C3F28F4C09500B77A63 /* DetailViewModel.swift */,
+				E564CD172909DEF50063FAB3 /* IdentifiableSkillViewModel.swift */,
 				E581DE7528F18D8F00DAC8D4 /* Mocks */,
 			);
 			path = ViewModel;
@@ -190,6 +211,7 @@
 				E599B7E52905CBD0008870D6 /* DetailsOfferSummary */,
 				E564CCFF2909D54A0063FAB3 /* DetailOfferHighlights */,
 				E564CD092909DB330063FAB3 /* MapView */,
+				E564CD102909DCC20063FAB3 /* TechStack */,
 			);
 			path = DetailScreen;
 			sourceTree = "<group>";
@@ -249,6 +271,7 @@
 				E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */,
 				E564CD0C2909DC3F0063FAB3 /* MapViewData.swift */,
 				E564CD0E2909DC5A0063FAB3 /* Place.swift */,
+				E564CD192909E0F30063FAB3 /* IdentifiableSkill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5CCD0BA28FF53A7003EF53F /* OffersListCell.swift in Sources */,
+				E564CD182909DEF50063FAB3 /* IdentifiableSkillViewModel.swift in Sources */,
 				E5E8E9B228FDF1FF00137150 /* SplashScreen.swift in Sources */,
 				E599B7E42905CA31008870D6 /* DetailsNavigationButtons.swift in Sources */,
 				E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */,
@@ -357,12 +381,14 @@
 				E552729B28F236FC006DAB63 /* Color+Random.swift in Sources */,
 				E564CD082909D8B10063FAB3 /* OfferHighlightSingleComponent.swift in Sources */,
 				E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */,
+				E564CD142909DD080063FAB3 /* TechStackCell.swift in Sources */,
 				E5B38C4228F4C53100B77A63 /* DetailViewModel+Mock.swift in Sources */,
 				E564CD0F2909DC5A0063FAB3 /* Place.swift in Sources */,
 				E564CD0D2909DC3F0063FAB3 /* MapViewData.swift in Sources */,
 				E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */,
 				E506181B28EF3D1D0020C89F /* TopBar.swift in Sources */,
 				E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */,
+				E564CD162909DEA70063FAB3 /* TechnologyDotIndicator.swift in Sources */,
 				E599B7ED2905CDB8008870D6 /* DetailOfferInfo.swift in Sources */,
 				E581DE7728F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift in Sources */,
 				E5E8E9B028FDF1F300137150 /* MainScreen.swift in Sources */,
@@ -372,12 +398,14 @@
 				E564CD012909D5620063FAB3 /* DetailOfferHighlights.swift in Sources */,
 				E5CCD0C428FF5BE0003EF53F /* DetailScreen.swift in Sources */,
 				E564CD062909D70A0063FAB3 /* OfferHighlightComponentRow.swift in Sources */,
+				E564CD1A2909E0F30063FAB3 /* IdentifiableSkill.swift in Sources */,
 				E564CD0B2909DB6A0063FAB3 /* MapView.swift in Sources */,
 				E599B7E72905CC83008870D6 /* DetailOfferSummary.swift in Sources */,
 				E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */,
 				E5CCD0B828FF539B003EF53F /* OffersList.swift in Sources */,
 				E599B7EB2905CD6E008870D6 /* DetailOfferLogo.swift in Sources */,
 				E581DE7428F1884D00DAC8D4 /* OfferCellViewModel.swift in Sources */,
+				E564CD122909DCD30063FAB3 /* TechStack.swift in Sources */,
 				E599B7EF2905CE80008870D6 /* DetailSalaryRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
