@@ -19,6 +19,7 @@ struct DetailScreen: View {
     var body: some View {
         ScrollView {
             DetailOfferSummary(for: model)
+            DetailOfferHighlights(for: model)
             
             Spacer()
         }

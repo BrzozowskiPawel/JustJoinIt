@@ -57,6 +57,32 @@ class DetailViewModel {
         return employmentTypes
     }
     
+        func getCompanyName() -> String {
+            return self.offer.company_name
+        }
+    
+        func getCompanySize() -> String {
+            return offer.company_size
+        }
+    
+        func getExp() -> String {
+            return offer.experience_level
+        }
+    
+        func getOfferAge() -> String {
+            let formatter = ISO8601DateFormatter()
+            formatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
+            let publishedAt = formatter.date(from: offer.published_at) ?? .now
+            let daysSinceLastActivity = Calendar.current.dateComponents([.day], from: publishedAt, to: .now).day ?? 0
+            if daysSinceLastActivity < 1 {
+                return "NEW"
+            } else if daysSinceLastActivity == 1 {
+                return "\(daysSinceLastActivity) day ago"
+            } else {
+                return "\(daysSinceLastActivity) days ago"
+            }
+        }
+    
 //    func getMapData() -> MapViewData {
 //        return MapViewData(
 //            region: MKCoordinateRegion(
@@ -90,32 +116,13 @@ class DetailViewModel {
 //        return CGFloat(offer.skills.count) / 2 * 90
 //    }
 //    
-//    func getCompanyName() -> String {
-//        return self.offer.company_name
-//    }
+
 //    
-//    func getCompanySize() -> String {
-//        return offer.company_size
-//    }
+
 //    
-//    func getExp() -> String {
-//        return offer.experience_level
-//    }
+
 //    
-//    func getHowOldOfferIs() -> String {
-//        let formatter = ISO8601DateFormatter()
-//        formatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
-//        let publishedAt = formatter.date(from: offer.published_at) ?? .now
-//        let daysSinceLastActivity = Calendar.current.dateComponents([.day], from: publishedAt, to: .now).day ?? 0
-//        if daysSinceLastActivity < 1 {
-//            return "NEW"
-//        } else if daysSinceLastActivity == 1 {
-//            return "\(daysSinceLastActivity) day ago"
-//        } else {
-//            return "\(daysSinceLastActivity) days ago"
-//        }
-//        
-//    }
+
 //    
 //    func getCompanyLogoUrl() -> String {
 //        return offer.company_logo_url
