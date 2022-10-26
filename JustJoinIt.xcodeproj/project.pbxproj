@@ -15,6 +15,9 @@
 		E564CD042909D68F0063FAB3 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = E564CD032909D68F0063FAB3 /* QGrid */; };
 		E564CD062909D70A0063FAB3 /* OfferHighlightComponentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD052909D70A0063FAB3 /* OfferHighlightComponentRow.swift */; };
 		E564CD082909D8B10063FAB3 /* OfferHighlightSingleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD072909D8B10063FAB3 /* OfferHighlightSingleComponent.swift */; };
+		E564CD0B2909DB6A0063FAB3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD0A2909DB6A0063FAB3 /* MapView.swift */; };
+		E564CD0D2909DC3F0063FAB3 /* MapViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD0C2909DC3F0063FAB3 /* MapViewData.swift */; };
+		E564CD0F2909DC5A0063FAB3 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD0E2909DC5A0063FAB3 /* Place.swift */; };
 		E581DE7428F1884D00DAC8D4 /* OfferCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */; };
 		E581DE7728F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581DE7628F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift */; };
 		E599B7E42905CA31008870D6 /* DetailsNavigationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599B7E32905CA31008870D6 /* DetailsNavigationButtons.swift */; };
@@ -47,6 +50,9 @@
 		E564CD002909D5620063FAB3 /* DetailOfferHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfferHighlights.swift; sourceTree = "<group>"; };
 		E564CD052909D70A0063FAB3 /* OfferHighlightComponentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferHighlightComponentRow.swift; sourceTree = "<group>"; };
 		E564CD072909D8B10063FAB3 /* OfferHighlightSingleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferHighlightSingleComponent.swift; sourceTree = "<group>"; };
+		E564CD0A2909DB6A0063FAB3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E564CD0C2909DC3F0063FAB3 /* MapViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewData.swift; sourceTree = "<group>"; };
+		E564CD0E2909DC5A0063FAB3 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E581DE7328F1884D00DAC8D4 /* OfferCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellViewModel.swift; sourceTree = "<group>"; };
 		E581DE7628F18DAC00DAC8D4 /* OfferListCellViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferListCellViewModel+Mock.swift"; sourceTree = "<group>"; };
 		E599B7E32905CA31008870D6 /* DetailsNavigationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNavigationButtons.swift; sourceTree = "<group>"; };
@@ -112,6 +118,14 @@
 			path = DetailOfferHighlights;
 			sourceTree = "<group>";
 		};
+		E564CD092909DB330063FAB3 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				E564CD0A2909DB6A0063FAB3 /* MapView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
 		E581DE7528F18D8F00DAC8D4 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +189,7 @@
 				E5CCD0C328FF5BE0003EF53F /* DetailScreen.swift */,
 				E599B7E52905CBD0008870D6 /* DetailsOfferSummary */,
 				E564CCFF2909D54A0063FAB3 /* DetailOfferHighlights */,
+				E564CD092909DB330063FAB3 /* MapView */,
 			);
 			path = DetailScreen;
 			sourceTree = "<group>";
@@ -232,6 +247,8 @@
 			children = (
 				E5DA283428ED683600A17AEF /* Offer.swift */,
 				E5B38C3B28F4BD0D00B77A63 /* DetailOffer.swift */,
+				E564CD0C2909DC3F0063FAB3 /* MapViewData.swift */,
+				E564CD0E2909DC5A0063FAB3 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,6 +358,8 @@
 				E564CD082909D8B10063FAB3 /* OfferHighlightSingleComponent.swift in Sources */,
 				E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */,
 				E5B38C4228F4C53100B77A63 /* DetailViewModel+Mock.swift in Sources */,
+				E564CD0F2909DC5A0063FAB3 /* Place.swift in Sources */,
+				E564CD0D2909DC3F0063FAB3 /* MapViewData.swift in Sources */,
 				E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */,
 				E506181B28EF3D1D0020C89F /* TopBar.swift in Sources */,
 				E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */,
@@ -353,6 +372,7 @@
 				E564CD012909D5620063FAB3 /* DetailOfferHighlights.swift in Sources */,
 				E5CCD0C428FF5BE0003EF53F /* DetailScreen.swift in Sources */,
 				E564CD062909D70A0063FAB3 /* OfferHighlightComponentRow.swift in Sources */,
+				E564CD0B2909DB6A0063FAB3 /* MapView.swift in Sources */,
 				E599B7E72905CC83008870D6 /* DetailOfferSummary.swift in Sources */,
 				E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */,
 				E5CCD0B828FF539B003EF53F /* OffersList.swift in Sources */,

@@ -20,7 +20,7 @@ struct DetailScreen: View {
         ScrollView {
             DetailOfferSummary(for: model)
             DetailOfferHighlights(for: model)
-            
+            MapView(for: model.getMapData())
             Spacer()
         }
         .background(.gray.opacity(0.1))
