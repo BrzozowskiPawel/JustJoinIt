@@ -19,14 +19,14 @@ struct DetailOfferSummary: View {
             DetailsNavigationButtons()
                 .padding(.vertical, 16)
             
-            HStack (alignment: .center, spacing: 0) {
+            HStack (alignment: .center, spacing: 30) {
                 DetailOfferLogo()
-                Spacer()
                 DetailOfferInfo(
                     title: viewModel.getTitle(),
                     street: viewModel.getStreet(),
                     location: viewModel.getLocation(),
                     workPlace: viewModel.getWorkplace())
+                Spacer()
             }
             .frame(
                 minWidth: 0,
