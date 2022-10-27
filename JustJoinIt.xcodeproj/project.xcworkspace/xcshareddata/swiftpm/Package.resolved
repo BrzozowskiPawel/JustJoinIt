@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Q-Mobile/QGrid",
       "state" : {
-        "revision" : "804e59f8cb9f66b226685e9369fb82029742b83a",
-        "version" : "0.1.4"
+        "branch" : "master",
+        "revision" : "8565654a123a0fa5e7969443cc2b13512c6cea33"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/NuPlay/RichText",
       "state" : {
-        "revision" : "48b840c46295111390f018ef5832f1e81567e32f",
-        "version" : "2.1.1"
+        "branch" : "main",
+        "revision" : "48b840c46295111390f018ef5832f1e81567e32f"
       }
     }
   ],

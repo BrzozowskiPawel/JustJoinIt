@@ -22,8 +22,7 @@ struct OffersList: View {
                 }
             }
         }
-        .background(.yellow.opacity(0.2))
-//        .background(.gray.opacity(0.1))
+        .background(.gray.opacity(0.1))
     }
 }
 

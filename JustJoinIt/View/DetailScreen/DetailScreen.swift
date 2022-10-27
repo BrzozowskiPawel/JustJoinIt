@@ -8,20 +8,27 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    @Environment(\.dismiss) var dismiss
+    private let model: DetailViewModel
+    
+    init(for offer: DetailOffer) {
+        self.model = DetailViewModel(offer: offer)
+    }
     
     var body: some View {
-        Button("Press to dismiss") {
-            dismiss()
+        ScrollView {
+            DetailOfferSummary(for: model)
+            DetailOfferHighlights(for: model)
+            MapView(for: model)
+            TechStack(for: model)
+            DetailOfferDescriptionView(for: model)
         }
-        .font(.title)
-        .padding()
-        .background(.black)
+        .background(.gray.opacity(0.1))
     }
 }
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailScreen()
+        let offer = DetailViewModel.mockDetailOffer()
+        DetailScreen(for: offer)
     }
 }
