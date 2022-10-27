@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    private let offerID: String
-    // TODO: Download proper offer
-    private let model = DetailViewModel.mockVM()
+    private let model: DetailViewModel
     
-    init(forID offerId: String) {
-        self.offerID = offerId
+    init(for offer: DetailOffer) {
+        self.model = DetailViewModel(offer: offer)
     }
     
     var body: some View {
@@ -30,7 +28,7 @@ struct DetailScreen: View {
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        let offer = OfferListCellViewModel.mockOffer()
-        DetailScreen(forID: offer.id)
+        let offer = DetailViewModel.mockDetailOffer()
+        DetailScreen(for: offer)
     }
 }

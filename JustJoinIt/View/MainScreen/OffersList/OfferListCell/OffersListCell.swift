@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OffersListCell: View {
     @State private var showingSheet = false
+    @State private var offer: DetailOffer?
     private let viewModel: OfferListCellViewModel
     
     
@@ -18,6 +19,19 @@ struct OffersListCell: View {
     
     var body: some View {
         Button {
+            Task {
+                do {
+                    // TODO: Work on dispaling spinner and if dowloaded going to the screen
+                    let offferURL = URLs.detailOffer(for: viewModel.getID())
+                    self.offer = try await NetworkManager.shared.getDetailOffer(atUrl: offferURL)
+                    if let offer = offer {
+                        showingSheet = true
+                    }
+                }
+                catch {
+                    print("❌ Error - \(error.localizedDescription)")
+                }
+            }
             showingSheet.toggle()
         } label: {
             HStack {
@@ -37,7 +51,9 @@ struct OffersListCell: View {
             .padding(.top, 5)
         }
         .sheet(isPresented: $showingSheet) {
-            DetailScreen(forID: viewModel.getID())
+            if let offer = offer {
+                DetailScreen(for: offer)
+            }
         }
     }
 }
