@@ -109,33 +109,30 @@ class DetailViewModel {
         return identifiableSkill
     }
     
+    func getDescription() -> String {
+        return offer.body
+    }
+    
+    func isRemoteInterview() -> Bool {
+        return offer.remote_interview
+    }
+    
     //
-    //    func getDescription() -> String {
-    //        return offer.body
-    //    }
     
-
+    //
     
-    //    func isRemoteInterview() -> Bool {
-    //        return offer.remote_interview
-    //    }
-
-    //    
+    //
     
-    //    
+    //
     
-    //    
-    
-    //    
-    
-    //    
+    //
     //    func getCompanyLogoUrl() -> String {
     //        return offer.company_logo_url
     //    }
     //
     //
     //
-    //    
+    //
     //    func isNewOffer() -> Bool {
     //        let formatter = ISO8601DateFormatter()
     //        formatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
@@ -143,17 +140,17 @@ class DetailViewModel {
     //        let hoursSinceLastActivity = Calendar.current.dateComponents([.hour], from: publishedAt, to: .now).hour ?? 0
     //        return hoursSinceLastActivity < 24 ? true : false
     //    }
-    //    
+    //
     //    func getSalary() -> String{
     //        guard let rangeMin = offer.employment_types[0].salary?.from,
     //                let rangeMax = offer.employment_types[0].salary?.to,
     //                let currency = offer.employment_types[0].salary?.currency else {
     //            return "Undisclosed Salary"
     //        }
-    //        
+    //
     //        let rangeMinRounded = (Double(rangeMin) / 1000.0).roundedTo(toPlaces: 1)
     //        let rangeMaxRounded = (Double(rangeMax) / 1000.0).roundedTo(toPlaces: 1)
-    //        
+    //
     //        return "\(rangeMinRounded)k - \(rangeMaxRounded)k \(currency.uppercased())"
     //    }
 }

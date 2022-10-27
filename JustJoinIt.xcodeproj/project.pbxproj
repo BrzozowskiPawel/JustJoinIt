@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E506181B28EF3D1D0020C89F /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E506181A28EF3D1D0020C89F /* TopBar.swift */; };
 		E506181E28EF403B0020C89F /* View+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = E506181D28EF403B0020C89F /* View+Border.swift */; };
+		E50D216E290A83C400AA4EFE /* DetailOfferDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */; };
+		E50D2171290A83FB00AA4EFE /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = E50D2170290A83FB00AA4EFE /* RichText */; };
 		E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545A2F128ED6C32008EB6B0 /* NetworkManager.swift */; };
 		E552729B28F236FC006DAB63 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552729A28F236FC006DAB63 /* Color+Random.swift */; };
 		E564CD012909D5620063FAB3 /* DetailOfferHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD002909D5620063FAB3 /* DetailOfferHighlights.swift */; };
@@ -50,6 +52,7 @@
 /* Begin PBXFileReference section */
 		E506181A28EF3D1D0020C89F /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		E506181D28EF403B0020C89F /* View+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Border.swift"; sourceTree = "<group>"; };
+		E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfferDescriptionView.swift; sourceTree = "<group>"; };
 		E545A2F128ED6C32008EB6B0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E552729A28F236FC006DAB63 /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
 		E564CD002909D5620063FAB3 /* DetailOfferHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfferHighlights.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E564CD042909D68F0063FAB3 /* QGrid in Frameworks */,
+				E50D2171290A83FB00AA4EFE /* RichText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +120,14 @@
 				E552729A28F236FC006DAB63 /* Color+Random.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E50D216C290A83B200AA4EFE /* DetailOfferDescriptionView */ = {
+			isa = PBXGroup;
+			children = (
+				E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */,
+			);
+			path = DetailOfferDescriptionView;
 			sourceTree = "<group>";
 		};
 		E564CCFF2909D54A0063FAB3 /* DetailOfferHighlights */ = {
@@ -212,6 +224,7 @@
 				E564CCFF2909D54A0063FAB3 /* DetailOfferHighlights */,
 				E564CD092909DB330063FAB3 /* MapView */,
 				E564CD102909DCC20063FAB3 /* TechStack */,
+				E50D216C290A83B200AA4EFE /* DetailOfferDescriptionView */,
 			);
 			path = DetailScreen;
 			sourceTree = "<group>";
@@ -314,6 +327,7 @@
 			name = JustJoinIt;
 			packageProductDependencies = (
 				E564CD032909D68F0063FAB3 /* QGrid */,
+				E50D2170290A83FB00AA4EFE /* RichText */,
 			);
 			productName = JustJoinIt;
 			productReference = E5DA282328ED676F00A17AEF /* JustJoinIt.app */;
@@ -345,6 +359,7 @@
 			mainGroup = E5DA281A28ED676F00A17AEF;
 			packageReferences = (
 				E564CD022909D68F0063FAB3 /* XCRemoteSwiftPackageReference "QGrid" */,
+				E50D216F290A83FB00AA4EFE /* XCRemoteSwiftPackageReference "RichText" */,
 			);
 			productRefGroup = E5DA282428ED676F00A17AEF /* Products */;
 			projectDirPath = "";
@@ -375,6 +390,7 @@
 				E5CCD0BA28FF53A7003EF53F /* OffersListCell.swift in Sources */,
 				E564CD182909DEF50063FAB3 /* IdentifiableSkillViewModel.swift in Sources */,
 				E5E8E9B228FDF1FF00137150 /* SplashScreen.swift in Sources */,
+				E50D216E290A83C400AA4EFE /* DetailOfferDescriptionView.swift in Sources */,
 				E599B7E42905CA31008870D6 /* DetailsNavigationButtons.swift in Sources */,
 				E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */,
 				E5CCD0BE28FF5A16003EF53F /* OfferInfoRightPanel.swift in Sources */,
@@ -611,6 +627,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E50D216F290A83FB00AA4EFE /* XCRemoteSwiftPackageReference "RichText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/RichText";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		E564CD022909D68F0063FAB3 /* XCRemoteSwiftPackageReference "QGrid" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Q-Mobile/QGrid";
@@ -622,6 +646,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E50D2170290A83FB00AA4EFE /* RichText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E50D216F290A83FB00AA4EFE /* XCRemoteSwiftPackageReference "RichText" */;
+			productName = RichText;
+		};
 		E564CD032909D68F0063FAB3 /* QGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E564CD022909D68F0063FAB3 /* XCRemoteSwiftPackageReference "QGrid" */;

@@ -20,7 +20,7 @@ struct DetailScreen: View {
             DetailOfferHighlights(for: model)
             MapView(for: model)
             TechStack(for: model)
-            Spacer()
+            DetailOfferDescriptionView(for: model)
         }
         .background(.gray.opacity(0.1))
     }
