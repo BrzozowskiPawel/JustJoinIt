@@ -47,6 +47,7 @@
 		E5DA283528ED683600A17AEF /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA283428ED683600A17AEF /* Offer.swift */; };
 		E5E8E9B028FDF1F300137150 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8E9AF28FDF1F300137150 /* MainScreen.swift */; };
 		E5E8E9B228FDF1FF00137150 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8E9B128FDF1FF00137150 /* SplashScreen.swift */; };
+		E5F4818D290AEF0B00E90750 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4818C290AEF0B00E90750 /* MapButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		E5DA283428ED683600A17AEF /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		E5E8E9AF28FDF1F300137150 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E5E8E9B128FDF1FF00137150 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		E5F4818C290AEF0B00E90750 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,8 +307,17 @@
 				E5E8E9B128FDF1FF00137150 /* SplashScreen.swift */,
 				E506181728EF3CE80020C89F /* TopBar */,
 				E5CCD0B628FF5384003EF53F /* OffersList */,
+				E5F4818B290AEEF600E90750 /* MapButton */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		E5F4818B290AEEF600E90750 /* MapButton */ = {
+			isa = PBXGroup;
+			children = (
+				E5F4818C290AEF0B00E90750 /* MapButton.swift */,
+			);
+			path = MapButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +431,7 @@
 				E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */,
 				E5CCD0B828FF539B003EF53F /* OffersList.swift in Sources */,
 				E599B7EB2905CD6E008870D6 /* DetailOfferLogo.swift in Sources */,
+				E5F4818D290AEF0B00E90750 /* MapButton.swift in Sources */,
 				E581DE7428F1884D00DAC8D4 /* OfferCellViewModel.swift in Sources */,
 				E564CD122909DCD30063FAB3 /* TechStack.swift in Sources */,
 				E599B7EF2905CE80008870D6 /* DetailSalaryRow.swift in Sources */,

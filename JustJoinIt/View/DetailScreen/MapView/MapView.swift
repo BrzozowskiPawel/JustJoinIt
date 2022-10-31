@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+
 struct MapView: View {
     @State private var region: MKCoordinateRegion
     let places: [Place]
@@ -17,6 +18,12 @@ struct MapView: View {
         self.region = data.region
         self.places = data.places
     }
+    
+    init(for data: MapViewData) {
+        self.region = data.region
+        self.places = data.places
+    }
+    
     
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: places) { place in

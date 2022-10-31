@@ -15,11 +15,15 @@ struct MainScreen: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            TopBar()
-            OffersList(for: offers)
-            Spacer()
+        ZStack {
+            VStack(spacing: 0) {
+                TopBar()
+                OffersList(for: offers)
+                Spacer()
+            }
+            MapButton()
         }
+        
         
     }
 }
