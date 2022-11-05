@@ -52,6 +52,7 @@
 		E5F1F687291725ED00A0A07E /* TechEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1F686291725ED00A0A07E /* TechEnum.swift */; };
 		E5F1F6892917260A00A0A07E /* TechType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1F6882917260A00A0A07E /* TechType.swift */; };
 		E5F1F68F2917297C00A0A07E /* TechButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1F68E2917297C00A0A07E /* TechButtonCell.swift */; };
+		E5F1F69229172C8500A0A07E /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1F69129172C8500A0A07E /* SearchButton.swift */; };
 		E5F4818D290AEF0B00E90750 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4818C290AEF0B00E90750 /* MapButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		E5F1F686291725ED00A0A07E /* TechEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechEnum.swift; sourceTree = "<group>"; };
 		E5F1F6882917260A00A0A07E /* TechType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechType.swift; sourceTree = "<group>"; };
 		E5F1F68E2917297C00A0A07E /* TechButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechButtonCell.swift; sourceTree = "<group>"; };
+		E5F1F69129172C8500A0A07E /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		E5F4818C290AEF0B00E90750 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				E501466E29106E67003230D9 /* FilterButtons.swift */,
 				E5884BBB29130B3900E7CB0A /* TechButton */,
+				E5F1F69029172C7400A0A07E /* SearchButton */,
 			);
 			path = FilterButtons;
 			sourceTree = "<group>";
@@ -191,8 +194,8 @@
 		E5884BBB29130B3900E7CB0A /* TechButton */ = {
 			isa = PBXGroup;
 			children = (
-				E5F1F68E2917297C00A0A07E /* TechButtonCell.swift */,
 				E501467029106ECA003230D9 /* FilterTechButton.swift */,
+				E5F1F68E2917297C00A0A07E /* TechButtonCell.swift */,
 			);
 			path = TechButton;
 			sourceTree = "<group>";
@@ -343,6 +346,14 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		E5F1F69029172C7400A0A07E /* SearchButton */ = {
+			isa = PBXGroup;
+			children = (
+				E5F1F69129172C8500A0A07E /* SearchButton.swift */,
+			);
+			path = SearchButton;
+			sourceTree = "<group>";
+		};
 		E5F4818B290AEEF600E90750 /* MapButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F1F69229172C8500A0A07E /* SearchButton.swift in Sources */,
 				E5CCD0BA28FF53A7003EF53F /* OffersListCell.swift in Sources */,
 				E564CD182909DEF50063FAB3 /* IdentifiableSkillViewModel.swift in Sources */,
 				E5E8E9B228FDF1FF00137150 /* SplashScreen.swift in Sources */,
