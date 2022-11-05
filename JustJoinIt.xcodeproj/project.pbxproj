@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E501466F29106E67003230D9 /* FilterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E501466E29106E67003230D9 /* FilterButtons.swift */; };
+		E501467129106ECA003230D9 /* FilterTechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E501467029106ECA003230D9 /* FilterTechButton.swift */; };
 		E506181B28EF3D1D0020C89F /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E506181A28EF3D1D0020C89F /* TopBar.swift */; };
 		E506181E28EF403B0020C89F /* View+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = E506181D28EF403B0020C89F /* View+Border.swift */; };
 		E50D216E290A83C400AA4EFE /* DetailOfferDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */; };
@@ -47,10 +49,15 @@
 		E5DA283528ED683600A17AEF /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA283428ED683600A17AEF /* Offer.swift */; };
 		E5E8E9B028FDF1F300137150 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8E9AF28FDF1F300137150 /* MainScreen.swift */; };
 		E5E8E9B228FDF1FF00137150 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8E9B128FDF1FF00137150 /* SplashScreen.swift */; };
+		E5F1F687291725ED00A0A07E /* TechEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1F686291725ED00A0A07E /* TechEnum.swift */; };
+		E5F1F6892917260A00A0A07E /* TechType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1F6882917260A00A0A07E /* TechType.swift */; };
+		E5F1F68F2917297C00A0A07E /* TechButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F1F68E2917297C00A0A07E /* TechButtonCell.swift */; };
 		E5F4818D290AEF0B00E90750 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4818C290AEF0B00E90750 /* MapButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E501466E29106E67003230D9 /* FilterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtons.swift; sourceTree = "<group>"; };
+		E501467029106ECA003230D9 /* FilterTechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTechButton.swift; sourceTree = "<group>"; };
 		E506181A28EF3D1D0020C89F /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		E506181D28EF403B0020C89F /* View+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Border.swift"; sourceTree = "<group>"; };
 		E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfferDescriptionView.swift; sourceTree = "<group>"; };
@@ -90,6 +97,9 @@
 		E5DA283428ED683600A17AEF /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		E5E8E9AF28FDF1F300137150 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E5E8E9B128FDF1FF00137150 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		E5F1F686291725ED00A0A07E /* TechEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechEnum.swift; sourceTree = "<group>"; };
+		E5F1F6882917260A00A0A07E /* TechType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechType.swift; sourceTree = "<group>"; };
+		E5F1F68E2917297C00A0A07E /* TechButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechButtonCell.swift; sourceTree = "<group>"; };
 		E5F4818C290AEF0B00E90750 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E501466D29106E43003230D9 /* FilterButtons */ = {
+			isa = PBXGroup;
+			children = (
+				E501466E29106E67003230D9 /* FilterButtons.swift */,
+				E5884BBB29130B3900E7CB0A /* TechButton */,
+			);
+			path = FilterButtons;
+			sourceTree = "<group>";
+		};
 		E506181728EF3CE80020C89F /* TopBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +186,15 @@
 				E5B38C4128F4C53100B77A63 /* DetailViewModel+Mock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E5884BBB29130B3900E7CB0A /* TechButton */ = {
+			isa = PBXGroup;
+			children = (
+				E5F1F68E2917297C00A0A07E /* TechButtonCell.swift */,
+				E501467029106ECA003230D9 /* FilterTechButton.swift */,
+			);
+			path = TechButton;
 			sourceTree = "<group>";
 		};
 		E599B7E52905CBD0008870D6 /* DetailsOfferSummary */ = {
@@ -287,6 +315,8 @@
 				E564CD0C2909DC3F0063FAB3 /* MapViewData.swift */,
 				E564CD0E2909DC5A0063FAB3 /* Place.swift */,
 				E564CD192909E0F30063FAB3 /* IdentifiableSkill.swift */,
+				E5F1F686291725ED00A0A07E /* TechEnum.swift */,
+				E5F1F6882917260A00A0A07E /* TechType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +336,7 @@
 				E5E8E9AF28FDF1F300137150 /* MainScreen.swift */,
 				E5E8E9B128FDF1FF00137150 /* SplashScreen.swift */,
 				E506181728EF3CE80020C89F /* TopBar */,
+				E501466D29106E43003230D9 /* FilterButtons */,
 				E5CCD0B628FF5384003EF53F /* OffersList */,
 				E5F4818B290AEEF600E90750 /* MapButton */,
 			);
@@ -403,7 +434,9 @@
 				E5E8E9B228FDF1FF00137150 /* SplashScreen.swift in Sources */,
 				E50D216E290A83C400AA4EFE /* DetailOfferDescriptionView.swift in Sources */,
 				E599B7E42905CA31008870D6 /* DetailsNavigationButtons.swift in Sources */,
+				E5F1F68F2917297C00A0A07E /* TechButtonCell.swift in Sources */,
 				E5B38C4028F4C09500B77A63 /* DetailViewModel.swift in Sources */,
+				E5F1F6892917260A00A0A07E /* TechType.swift in Sources */,
 				E5CCD0BE28FF5A16003EF53F /* OfferInfoRightPanel.swift in Sources */,
 				E552729B28F236FC006DAB63 /* Color+Random.swift in Sources */,
 				E564CD082909D8B10063FAB3 /* OfferHighlightSingleComponent.swift in Sources */,
@@ -411,6 +444,7 @@
 				E564CD142909DD080063FAB3 /* TechStackCell.swift in Sources */,
 				E5B38C4228F4C53100B77A63 /* DetailViewModel+Mock.swift in Sources */,
 				E564CD0F2909DC5A0063FAB3 /* Place.swift in Sources */,
+				E501466F29106E67003230D9 /* FilterButtons.swift in Sources */,
 				E564CD0D2909DC3F0063FAB3 /* MapViewData.swift in Sources */,
 				E5AA80FF28F1DEC000B0366F /* Modal+FullScreen.swift in Sources */,
 				E506181B28EF3D1D0020C89F /* TopBar.swift in Sources */,
@@ -431,8 +465,10 @@
 				E5DA282728ED676F00A17AEF /* JustJoinItApp.swift in Sources */,
 				E5CCD0B828FF539B003EF53F /* OffersList.swift in Sources */,
 				E599B7EB2905CD6E008870D6 /* DetailOfferLogo.swift in Sources */,
+				E5F1F687291725ED00A0A07E /* TechEnum.swift in Sources */,
 				E5F4818D290AEF0B00E90750 /* MapButton.swift in Sources */,
 				E581DE7428F1884D00DAC8D4 /* OfferCellViewModel.swift in Sources */,
+				E501467129106ECA003230D9 /* FilterTechButton.swift in Sources */,
 				E564CD122909DCD30063FAB3 /* TechStack.swift in Sources */,
 				E599B7EF2905CE80008870D6 /* DetailSalaryRow.swift in Sources */,
 			);
