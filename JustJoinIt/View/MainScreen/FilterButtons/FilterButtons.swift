@@ -13,6 +13,7 @@ struct FilterButtons: View {
              HStack {
                  SearchButton()
                  FilterTechButton()
+                 MoreFilters()
              }
         }
         .padding(8)
