@@ -16,6 +16,7 @@ struct SalaryFilters: View {
             RemoteOffers()
         }
         .padding(.horizontal, 16)
+        .padding(.top, 8)
     }
 }
 

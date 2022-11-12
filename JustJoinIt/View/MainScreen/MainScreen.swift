@@ -18,6 +18,7 @@ struct MainScreen: View {
         VStack(spacing: 0) {
             TopBar()
             FilterButtons()
+            SalaryFilters()
             OffersList(for: offers)
             Spacer()
         }
