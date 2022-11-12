@@ -20,9 +20,9 @@ struct OffersList: View {
                 ForEach(offersArray) { offer in
                     OffersListCell(for: offer)
                 }
-            }
+            }.padding(.top, 2)
         }
-        .background(.gray.opacity(0.2))
+        .background(.gray.opacity(0.1))
     }
 }
 
