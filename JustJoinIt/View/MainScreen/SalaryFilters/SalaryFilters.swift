@@ -13,7 +13,7 @@ struct SalaryFilters: View {
             SalaryOfferButton("With Salary")
             SalaryOfferButton("All offers")
             Spacer()
-            
+            RemoteOffers()
         }
         .padding(.horizontal, 16)
     }

@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct RemoteOffers: View {
+    @State private var isSelected: Bool = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Remote")
+                .foregroundColor(.gray)
+                .font(.system(size: 18))
+                .fontWeight(.semibold)
+            Toggle("Remote", isOn: $isSelected)
+                .labelsHidden()
+        }
     }
 }
 
