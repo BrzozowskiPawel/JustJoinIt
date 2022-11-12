@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct RemoteOffers: View {
+struct RemoteOffersSwitch: View {
     @State private var isSelected: Bool = false
     var body: some View {
         HStack {
             Text("Remote")
                 .foregroundColor(.gray)
-                .font(.system(size: 18))
+                .font(.system(size: 15))
                 .fontWeight(.semibold)
             Toggle("Remote", isOn: $isSelected)
                 .labelsHidden()
@@ -23,6 +23,6 @@ struct RemoteOffers: View {
 
 struct RemoteOffers_Previews: PreviewProvider {
     static var previews: some View {
-        RemoteOffers()
+        RemoteOffersSwitch()
     }
 }

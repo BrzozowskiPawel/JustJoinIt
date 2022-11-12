@@ -28,9 +28,10 @@ struct SalaryOfferButton: View {
                 .padding(8)
                 .background(
                     isSelected
-                    ? Color.gray.opacity(0.1)
+                    ? Color.gray.opacity(0.15)
                     : Color.white)
                 .cornerRadius(12, corners: [.topLeft, .topRight])
+                .padding(.trailing, 4)
         }
 
         

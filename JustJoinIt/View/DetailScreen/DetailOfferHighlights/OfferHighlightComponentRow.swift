@@ -34,7 +34,7 @@ struct OfferHighlightComponentRow: View {
             .frame(minWidth: 0,
                    maxWidth: .infinity)
         }
-        .background(.gray.opacity(0.1))
+        .background(.gray.opacity(0.15))
     }
 }
 

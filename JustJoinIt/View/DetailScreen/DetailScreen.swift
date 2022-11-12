@@ -22,7 +22,7 @@ struct DetailScreen: View {
             TechStack(for: model)
             DetailOfferDescriptionView(for: model)
         }
-        .background(.gray.opacity(0.1))
+        .background(.gray.opacity(0.15))
     }
 }
 

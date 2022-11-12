@@ -9,13 +9,13 @@ import SwiftUI
 
 struct SalaryFilters: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 0){
             SalaryOfferButton("With Salary")
             SalaryOfferButton("All offers")
             Spacer()
-            RemoteOffers()
+            RemoteOffersSwitch()
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 8)
         .padding(.top, 8)
     }
 }
