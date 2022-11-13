@@ -12,11 +12,24 @@ struct FilterButtons: View {
         ScrollView (.horizontal, showsIndicators: false) {
              HStack {
                  SearchButton()
-                 FilterTechButton()
-                 MoreFilters()
+                 StyledButton(
+                    title: "Location",
+                    action: {})
+                 StyledButton(
+                    title: "Tech",
+                    action: {})
+                 StyledButton(
+                    title: "More Filters",
+                    action: {})
+                 StyledButton(
+                    title: "Latest",
+                    action: {})
+//                 FilterTechButton()
+//                 MoreFilters()
              }
+             .padding(.vertical, 2)
         }
-        .padding(8)
+        .padding(6)
         .border(width: 0.5, edges: [.bottom], color: .gray.opacity(0.5))
     }
 }

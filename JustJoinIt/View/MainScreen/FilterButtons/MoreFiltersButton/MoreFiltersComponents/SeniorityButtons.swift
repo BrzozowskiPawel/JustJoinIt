@@ -21,7 +21,10 @@ struct SeniorityButtons: View {
             ScrollView (.horizontal, showsIndicators: false) {
                  HStack {
                      ForEach(buttons, id: \.self.rawValue) { button in
-                         ButtonCell(button.rawValue)
+                         StyledButton(
+                            title: button.rawValue,
+                            action: {})
+                         .padding(.vertical, 2)
                      }
                  }
             }

@@ -21,6 +21,9 @@
 		E50A209029184DFE003414A0 /* UkraineFriendlyOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50A208F29184DFE003414A0 /* UkraineFriendlyOffers.swift */; };
 		E50D216E290A83C400AA4EFE /* DetailOfferDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */; };
 		E50D2171290A83FB00AA4EFE /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = E50D2170290A83FB00AA4EFE /* RichText */; };
+		E542BF742921208300002A40 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542BF732921208300002A40 /* StyledButton.swift */; };
+		E542BF762921298C00002A40 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542BF752921298C00002A40 /* Colors.swift */; };
+		E542BF7829212AC200002A40 /* View+ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542BF7729212AC200002A40 /* View+ConditionalModifier.swift */; };
 		E545A2F228ED6C32008EB6B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E545A2F128ED6C32008EB6B0 /* NetworkManager.swift */; };
 		E552729B28F236FC006DAB63 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552729A28F236FC006DAB63 /* Color+Random.swift */; };
 		E564CD012909D5620063FAB3 /* DetailOfferHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564CD002909D5620063FAB3 /* DetailOfferHighlights.swift */; };
@@ -83,6 +86,9 @@
 		E50A208D29184CFD003414A0 /* SeniorityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorityEnum.swift; sourceTree = "<group>"; };
 		E50A208F29184DFE003414A0 /* UkraineFriendlyOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UkraineFriendlyOffers.swift; sourceTree = "<group>"; };
 		E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfferDescriptionView.swift; sourceTree = "<group>"; };
+		E542BF732921208300002A40 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		E542BF752921298C00002A40 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E542BF7729212AC200002A40 /* View+ConditionalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ConditionalModifier.swift"; sourceTree = "<group>"; };
 		E545A2F128ED6C32008EB6B0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E552729A28F236FC006DAB63 /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
 		E564CD002909D5620063FAB3 /* DetailOfferHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfferHighlights.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 				E5AA80FE28F1DEC000B0366F /* Modal+FullScreen.swift */,
 				E552729A28F236FC006DAB63 /* Color+Random.swift */,
 				E5C6A906292002DF0056C94C /* View+CornerRadius.swift */,
+				E542BF7729212AC200002A40 /* View+ConditionalModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +220,15 @@
 				E50D216D290A83C400AA4EFE /* DetailOfferDescriptionView.swift */,
 			);
 			path = DetailOfferDescriptionView;
+			sourceTree = "<group>";
+		};
+		E542BF722921206E00002A40 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E542BF732921208300002A40 /* StyledButton.swift */,
+				E542BF752921298C00002A40 /* Colors.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E564CCFF2909D54A0063FAB3 /* DetailOfferHighlights */ = {
@@ -407,6 +423,7 @@
 			children = (
 				E5E8E9AE28FDF1C900137150 /* MainScreen */,
 				E5CCD0C128FF5BC2003EF53F /* DetailScreen */,
+				E542BF722921206E00002A40 /* Common */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -542,6 +559,7 @@
 				E552729B28F236FC006DAB63 /* Color+Random.swift in Sources */,
 				E564CD082909D8B10063FAB3 /* OfferHighlightSingleComponent.swift in Sources */,
 				E5C6A907292002DF0056C94C /* View+CornerRadius.swift in Sources */,
+				E542BF742921208300002A40 /* StyledButton.swift in Sources */,
 				E50A207E29183AE3003414A0 /* MoreFilters.swift in Sources */,
 				E5B38C3C28F4BD0D00B77A63 /* DetailOffer.swift in Sources */,
 				E564CD142909DD080063FAB3 /* TechStackCell.swift in Sources */,
@@ -565,6 +583,7 @@
 				E506181E28EF403B0020C89F /* View+Border.swift in Sources */,
 				E564CD012909D5620063FAB3 /* DetailOfferHighlights.swift in Sources */,
 				E5C6A905292000FB0056C94C /* SalaryOfferButton.swift in Sources */,
+				E542BF7829212AC200002A40 /* View+ConditionalModifier.swift in Sources */,
 				E5CCD0C428FF5BE0003EF53F /* DetailScreen.swift in Sources */,
 				E564CD062909D70A0063FAB3 /* OfferHighlightComponentRow.swift in Sources */,
 				E564CD1A2909E0F30063FAB3 /* IdentifiableSkill.swift in Sources */,
@@ -575,6 +594,7 @@
 				E5CCD0B828FF539B003EF53F /* OffersList.swift in Sources */,
 				E5C6A90A292003DC0056C94C /* RemoteOffersSwitch.swift in Sources */,
 				E599B7EB2905CD6E008870D6 /* DetailOfferLogo.swift in Sources */,
+				E542BF762921298C00002A40 /* Colors.swift in Sources */,
 				E5F1F687291725ED00A0A07E /* TechEnum.swift in Sources */,
 				E5F4818D290AEF0B00E90750 /* MapButton.swift in Sources */,
 				E50A208E29184CFD003414A0 /* SeniorityEnum.swift in Sources */,
