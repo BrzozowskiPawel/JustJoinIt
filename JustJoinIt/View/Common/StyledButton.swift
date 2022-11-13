@@ -24,7 +24,7 @@ struct StyledButtonStyle: ButtonStyle {
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .stroke(currentForegroundColor.opacity(0.6), lineWidth: 1)
             )
-            .font(Font.system(size: 13, weight: .semibold))
+            .font(Font.system(size: 12, weight: .semibold))
     }
 }
 

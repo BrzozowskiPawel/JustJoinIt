@@ -22,7 +22,7 @@ struct OffersList: View {
                 }
             }.padding(.top, 2)
         }
-        .background(.gray.opacity(0.15))
+        .background(Colors.background)
     }
 }
 

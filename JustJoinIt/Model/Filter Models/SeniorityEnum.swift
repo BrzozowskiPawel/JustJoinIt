@@ -9,7 +9,7 @@ import Foundation
 
 enum SeniorityEnum: String {
     case All = "All"
-    case Junior = "Junio"
+    case Junior = "Junior"
     case Mid = "Mid"
     case Senior = "Senior"
 }
