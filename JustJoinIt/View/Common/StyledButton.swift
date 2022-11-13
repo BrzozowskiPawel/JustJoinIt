@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StyledButtonStyle: ButtonStyle {
     
-    let cornerRadius: CGFloat = 12
+    let cornerRadius: CGFloat = 16
     @Binding var isActive: Bool
     
     func makeBody(configuration: Self.Configuration) -> some View {
@@ -18,13 +18,13 @@ struct StyledButtonStyle: ButtonStyle {
             .padding(.vertical, 8)
             .padding(.horizontal, 16)
             .foregroundColor(currentForegroundColor)
-            .background(isActive ? Color.pink.opacity(0.1) : Color.white)
+            .background(isActive ? Color.pink.opacity(0.05) : Color.white)
             .cornerRadius(cornerRadius)
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(currentForegroundColor.opacity(0.6), lineWidth: 1.5)
+                    .stroke(currentForegroundColor.opacity(0.6), lineWidth: 1)
             )
-            .font(Font.system(size: 15, weight: .regular))
+            .font(Font.system(size: 13, weight: .semibold))
     }
 }
 
@@ -37,7 +37,7 @@ struct StyledButton: View {
     @State private var active: Bool
     
     init(title: String,
-         active: Bool = true,
+         active: Bool = false,
          action: @escaping () -> Void) {
         self.title = title
         self.action = action
@@ -47,9 +47,7 @@ struct StyledButton: View {
     var body: some View {
         
         Button(action: {
-            withAnimation {
-                self.active.toggle()
-            }
+            self.active.toggle()
             self.action()
         }) {
             Text(self.title)
