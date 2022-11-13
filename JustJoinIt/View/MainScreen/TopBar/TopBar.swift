@@ -26,6 +26,7 @@ struct TopBar: View {
                     .foregroundColor(.white)
                     .clipShape(Capsule())
             }
+            .padding(.vertical, 2)
             
             Button {
                 print("Currency tapped")
@@ -42,7 +43,7 @@ struct TopBar: View {
             }
 
         }
-        .padding(.horizontal, 8.0)
+        .padding(.horizontal, 6.0)
         .frame(height: 48)
         .border(width: 0.5, edges: [.bottom], color: .gray.opacity(0.5))
     }
