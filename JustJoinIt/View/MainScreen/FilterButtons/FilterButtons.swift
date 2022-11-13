@@ -12,8 +12,14 @@ struct FilterButtons: View {
         ScrollView (.horizontal, showsIndicators: false) {
              HStack {
                  SearchButton()
-                 FilterTechButton()
-                 MoreFilters()
+                 StyledButton(
+                    title: "Tech",
+                    action: {})
+                 StyledButton(
+                    title: "More Filters",
+                    action: {})
+//                 FilterTechButton()
+//                 MoreFilters()
              }
         }
         .padding(8)
